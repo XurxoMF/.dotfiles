@@ -1,0 +1,29 @@
+/* TIME */
+
+#clock.time {
+  padding: 2px;
+}
+
+/* WORDSPACES */
+
+#workspaces {
+  margin: 0px 20px;
+  padding: 2px 5px;
+  background-color: @accent1;
+  border-radius: 15px;
+}
+
+#workspaces button .workspace-label {
+  color: @foreground;
+  padding: 0px 2px;
+}
+
+#workspaces button.active .workspace-label {
+  color: @accent2;
+}
+
+/* DATE */
+
+#clock.date {
+  padding: 2px;
+}

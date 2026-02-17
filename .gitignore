@@ -1,0 +1,13 @@
+# Ignore yazi plugins folders. Install with `ya pkg install`
+.config/yazi/plugins/
+.config/yazi/init.lua
+
+# Ignore hyprland custom configs folder
+.config/hypr/custom/
+
+# Ignore custom .bashrc
+.bashrc-custom
+.config/bashrc/cutsom/
+
+# Ignore kitty custom config
+.config/kitty/custom.conf

@@ -1,0 +1,37 @@
+/* NETWORK */
+
+#network {
+  padding-right: 3px;
+}
+
+/* BLUETOOTH */
+
+#bluetooth {
+  margin-left: 3px;
+  padding-right: 3px;
+}
+
+/* SYSTEM UPDATE */
+
+#custom-system_update {
+  margin-left: 3px;
+  padding-right: 3px;
+}
+
+/* TRAY */
+
+#tray {
+  margin-left: 3px;
+  padding: 0px 3px;
+}
+
+#tray > .needs-attention {
+  color: @warning;
+}
+
+#tray menu {
+  padding: 10px;
+  border: 2px solid @accent1;
+  border-radius: 6px;
+  background-color: @background;
+}

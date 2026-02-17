@@ -1,0 +1,6 @@
+@define-color background    rgba(0, 1, 5, 1);
+@define-color accent1       rgba(250, 161, 255, 1);
+@define-color accent2       rgba(140, 12, 176, 1);
+@define-color foreground    rgba(255, 255, 255, 1);
+@define-color warning       rgba(242, 207, 5, 1);
+@define-color critical      rgba(196, 16, 31, 1);

@@ -1,0 +1,35 @@
+/* VOLUME */
+
+#pulseaudio,
+#wireplumber {
+  margin-left: 3px;
+  padding: 2px;
+}
+
+/* TEMPERATURE */
+
+#temperature {
+  margin-left: 3px;
+  padding: 2px;
+}
+
+/* MEMORY */
+
+#memory {
+  margin-left: 3px;
+  padding: 2px;
+}
+
+/* CPU */
+
+#cpu {
+  margin-left: 3px;
+  padding: 2px;
+}
+
+/* POWER MENU */
+
+#custom-power_menu {
+  margin-left: 3px;
+  padding: 2px;
+}

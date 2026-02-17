@@ -1,0 +1,10 @@
+#memory.warning,
+#cpu.warning {
+  color: @warning;
+}
+
+#temperature.critical,
+#memory.critical,
+#cpu.critical {
+  color: @critical;
+}
