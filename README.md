@@ -170,7 +170,7 @@ flatpak install com.protonvpn.www com.usebruno.Bruno org.torproject.torbrowser-l
 I use some directories for personal things and those need configuration for other apps to use them correctly
 
 ```bash
-mkdir ~/Escritorio ~/Descargas ~/Modelos ~/Público ~/Documentos ~/Música ~/Imáxes ~/Vídeos
+mkdir ~/Escritorio ~/Descargas ~/Modelos ~/Público ~/Documentos ~/Música ~/Imaxes ~/Vídeos ~/Xogos ~/Aplicacións
 rm -r ~/.config/user-dirs.dirs
 cp ~/.dotfiles/.config/user-dirs.dirs ~/.config/user-dirs.dirs
 ```
