@@ -27,15 +27,12 @@ sudo pacman -S noto-fonts-cjk noto-fonts-emoji otf-commit-mono-nerd
 This ones are the 100% required for my dots to work. You can replace all of them if you want but you'll loose functionality
 
 ```bash
-pacman -S sddm flatpak kitty neovim firefox hyprland hypridle hyprlock hyprpaper hyprpicker waybar wlogout wl-clipboard yazi mako grim slurp trash-cli hyprpolkitagent util-linux pipewire pavucontrol ffmpeg xrandr wireplumber 7zip jq poppler fd ripgrep fzf zoxide resvg imagemagick zip tar xsettingsd bluez-utils libnotify libpulse
+pacman -S rust sddm flatpak kitty neovim firefox hyprland hypridle hyprlock hyprpaper hyprpicker waybar wl-clipboard yazi mako grim slurp trash-cli hyprpolkitagent util-linux pipewire pavucontrol ffmpeg xorg-xrandr wireplumber 7zip jq poppler fd ripgrep fzf zoxide resvg imagemagick util-linux zip tar xsettingsd bluez-utils libnotify libpulse
 ```
 
 ```bash
-yay -S walker elephant elephant-menus elephant-providerlist elephant-desktopapplications elephant-clipboard elephant-symbols elephant-calc elephant-archlinuxpkgs elephant-windows rar
+yay -S walker elephant elephant-all rar
 ```
-
-> [!NOTE]
-> If it asks to install `rust` or `rustup`, select `rust`.
 
 ```bash
 pacman -S xdg-desktop-portal xdg-desktop-portal-hyprland xdg-desktop-portal-gtk xdg-user-dirs
@@ -63,32 +60,6 @@ Include = /etc/pacman.d/mirrorlist
 > [!CAUTION]
 > This will delete some of your `.config` and other folders so backup them up before you continue
 
-### SDDM theme
-
-To install the SDDM theme follow this steps
-
-Copy the theme to the themes folder and chanhe the owner to root
-
-```bash
-sudo rm -r /usr/share/sddm/themes/sddm-xurxomf-theme
-sudo cp -r ~/.dotfiles/sddm-xurxomf-theme /usr/share/sddm/themes/
-sudo chown root:root /usr/share/sddm/themes/sddm-xurxomf-theme
-```
-
-Select the theme use use by sddm so it uses this one
-
-```bash
-echo "[Theme]
-Current=sddm-xurxomf-theme" | sudo tee /etc/sddm.conf
-```
-
-Select the vistual keyboard to use on the login screen
-
-```bash
-echo "[General]
-InputMethod=qtvirtualkeyboard" | sudo tee /etc/sddm.conf.d/virtualkbd.conf
-```
-
 ### Elephant config:
 
 This is the Elephant configuration
@@ -103,6 +74,7 @@ ln -s ~/.dotfiles/.config/elephant ~/.config/elephant
 This includes Hyprland, Hyprpaper, Hypridle, Hyprlock... themes and configurations
 
 ```bash
+touch ~/.config/hypr/custom/hyprland/autostart.conf ~/.config/hypr/custom/hyprland/envs.conf ~/.config/hypr/custom/hyprland/input.conf ~/.config/hypr/custom/hyprland/keybindings.conf ~/.config/hypr/custom/hyprland/look-and-feel.conf ~/.config/hypr/custom/hyprland/monitors.conf ~/.config/hypr/custom/hyprland/perms.conf ~/.config/hypr/custom/hyprland/windows.conf ~/.config/hypr/custom/hyprland/workspaces.conf
 rm -r ~/.config/hypr
 ln -s ~/.dotfiles/.config/hypr ~/.config/hypr
 ```
@@ -145,6 +117,8 @@ ln -s ~/.dotfiles/.config/walker ~/.config/walker
 
 ### Waybar theme:
 
+> **⚠️ NOT DONE YET**
+
 This is the Waybar configuration and styles
 
 ```bash
@@ -166,8 +140,8 @@ ln -s ~/.dotfiles/.config/xsettingsd ~/.config/xsettingsd
 This is the Yazi configuration and styles
 
 ```bash
-rm -r ~/.config/wofi
-ln -s ~/.dotfiles/.config/wofi ~/.config/wofi
+rm -r ~/.config/yazi
+ln -s ~/.dotfiles/.config/yazi ~/.config/yazi
 ya pkg install
 ```
 
@@ -196,6 +170,7 @@ flatpak install com.protonvpn.www com.usebruno.Bruno org.torproject.torbrowser-l
 I use some directories for personal things and those need configuration for other apps to use them correctly
 
 ```bash
+mkdir ~/Escritorio ~/Descargas ~/Modelos ~/Público ~/Documentos ~/Música ~/Imáxes ~/Vídeos
 rm -r ~/.config/user-dirs.dirs
 cp ~/.dotfiles/.config/user-dirs.dirs ~/.config/user-dirs.dirs
 ```
