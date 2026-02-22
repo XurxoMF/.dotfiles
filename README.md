@@ -1,43 +1,43 @@
-# Welcome to my Dotfiles
+# Benvido aos meus Dotfiles
 
-This are the dotfiles I use on Arch + Hyprland on my devices
+Estes son os dotfiles que uso en Arch + Hyprland nos meus dispositivos
 
-## Dependencies
+## Dependencias
 
-Install this software for the dotfiles to work properly
+Instala este software para que os dotfiles funcionen correctamente
 
 ### YAY
 
-YAY is 100% required as some programs and utilities depend on it
+YAY é 100% necesario xa que algúns programas e utilidades dependen del
 
 ```bash
 sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si && cd .. && sudo rm -r yay
 ```
 
-### Enable [multilib] on pacman
+### Activar [multilib] en pacman
 
 ```bash
 sudo nvim /etc/pacman.conf
 ```
 
-Remove comments on the next lines:
+Elimina os comentarios das seguintes liñas:
 
 ```
 [multilib]
 Include = /etc/pacman.d/mirrorlist
 ```
 
-### Fonts
+### Fontes
 
-This ones are the fonts I use on most parts of my system
+Estas son as fontes que uso na maioría das partes do meu sistema
 
 ```bash
 sudo pacman -S noto-fonts-cjk noto-fonts-emoji otf-commit-mono-nerd
 ```
 
-### Packages
+### Paquetes
 
-This ones are the 100% required for my dots to work. You can replace all of them if you want but you'll loose functionality
+Estes son os 100% necesarios para que os meus dots funcionen. Podes substituílos todos se queres pero perderás funcionalidade
 
 ```bash
 sudo pacman -S rust sddm flatpak kitty neovim firefox hyprland hypridle hyprlock hyprpaper hyprpicker waybar wl-clipboard yazi swaync grim slurp trash-cli hyprpolkitagent util-linux pipewire pavucontrol ffmpeg xorg-xrandr wireplumber 7zip jq poppler fd ripgrep fzf zoxide resvg imagemagick util-linux zip tar xsettingsd bluez-utils libnotify libpulse btop blueman gnome-themes-extra xdg-desktop-portal xdg-desktop-portal-hyprland xdg-desktop-portal-gtk xdg-user-dirs qt6ct qt5ct qt5-base qt6-base qt5-wayland qt6-wayland qt5-virtualkeyboard qt6-virtualkeyboard
@@ -47,106 +47,106 @@ sudo pacman -S rust sddm flatpak kitty neovim firefox hyprland hypridle hyprlock
 yay -S walker elephant-all rar
 ```
 
-## Installation
+## Instalación
 
 > [!CAUTION]
-> This will delete some of your `.config` and other folders so backup them up before you continue
+> Isto eliminará algunhas das túas carpetas `.config` e outras, así que fai unha copia de seguridade antes de continuar
 
-### Elephant config:
+### Configuración de Elephant:
 
-This is the Elephant configuration
+Esta é a configuración de Elephant
 
 ```bash
 rm -r ~/.config/elephant && ln -s ~/.dotfiles/.config/elephant ~/.config/elephant
 ```
 
-### GTK config:
+### Configuración de GTK:
 
-This is the GTK 3/4 configuration
+Esta é a configuración de GTK 3/4
 
 ```bash
 rm -r ~/.config/gtk-3.0 ~/.config/gtk-4.0 && ln -s ~/.dotfiles/.config/gtk-3.0 ~/.config/gtk-3.0 && ln -s ~/.dotfiles/.config/gtk-4.0 ~/.config/gtk-4.0
 ```
 
-### Hypr\* theme:
+### Tema de Hypr\*:
 
-This includes Hyprland, Hyprpaper, Hypridle, Hyprlock... themes and configurations
+Isto inclúe os temas e configuracións de Hyprland, Hyprpaper, Hypridle, Hyprlock...
 
 ```bash
 rm -r ~/.config/hypr && ln -s ~/.dotfiles/.config/hypr ~/.config/hypr && mkdir -p ~/.config/hypr/custom/hyprland && touch ~/.config/hypr/custom/hyprland/autostart.conf ~/.config/hypr/custom/hyprland/envs.conf ~/.config/hypr/custom/hyprland/input.conf ~/.config/hypr/custom/hyprland/keybindings-mod.conf ~/.config/hypr/custom/hyprland/keybindings.conf ~/.config/hypr/custom/hyprland/look-and-feel.conf ~/.config/hypr/custom/hyprland/monitors.conf ~/.config/hypr/custom/hyprland/perms.conf ~/.config/hypr/custom/hyprland/windows.conf ~/.config/hypr/custom/hyprland/workspaces.conf
 ```
 
-### Kitty theme:
+### Tema de Kitty:
 
-This are the Kitty terminal configuration and styles
+Esta é a configuración e estilos do terminal Kitty
 
 ```bash
 rm -r ~/.config/kitty && ln -s ~/.dotfiles/.config/kitty ~/.config/kitty && touch ~/.config/kitty/custom.conf
 ```
 
-### Mako theme:
+### Tema de Mako:
 
-This is the Mako notification daemon configuration and styles
+Esta é a configuración e estilos do daemon de notificacións Mako
 
 ```bash
 rm -r ~/.config/mako && ln -s ~/.dotfiles/.config/mako ~/.config/mako
 ```
 
-### QT theme:
+### Tema de QT:
 
-This is the QT 5/6 configuration and styles
+Esta é a configuración e estilos de QT 5/6
 
 ```bash
 rm -r ~/.config/qt6ct ~/.config/qt5ct && ln -s ~/.dotfiles/.config/qt6ct ~/.config/qt6ct && ln -s ~/.dotfiles/.config/qt5ct ~/.config/qt5ct
 ```
 
-### Walker config:
+### Configuración de Walker:
 
-This are the Walker configurations and styles
+Estas son as configuracións e estilos de Walker
 
 ```bash
 rm -r ~/.config/walker && ln -s ~/.dotfiles/.config/walker ~/.config/walker
 ```
 
-### Waybar theme:
+### Tema de Waybar:
 
-This is the Waybar configuration and styles
+Esta é a configuración e estilos de Waybar
 
 ```bash
 rm -r ~/.config/waybar && ln -s ~/.dotfiles/.config/waybar ~/.config/waybar && mkdir -p .config/autostart && cp /etc/xdg/autostart/nm-applet.desktop ~/.config/autostart/nm-applet.desktop && echo "Hiden=true" >> ~/.config/autostart/nm-applet.desktop
 ```
 
-### xsettingsd config:
+### Configuración de xsettingsd:
 
-This is the xsettingsd configuration
+Esta é a configuración de xsettingsd
 
 ```bash
 rm -r ~/.config/xsettingsd && ln -s ~/.dotfiles/.config/xsettingsd ~/.config/xsettingsd
 ```
 
-### Yazi theme:
+### Tema de Yazi:
 
-This is the Yazi configuration and styles
+Esta é a configuración e estilos de Yazi
 
 ```bash
 rm -r ~/.config/yazi && ln -s ~/.dotfiles/.config/yazi ~/.config/yazi && ya pkg install
 ```
 
-### bashrc config:
+### Configuración de bashrc:
 
-This is the custom .bashrc config and loader
+Esta é a configuración e cargador personalizado de .bashrc
 
 ```bash
 rm -r ~/.bashrc ~/.config/bashrc && ln -s ~/.dotfiles/.bashrc ~/.bashrc && ln -s ~/.dotfiles/.config/bashrc ~/.config/bashrc && touch ~/.bashrc_custom && mkdir -p ~/.config/bashrc/custom
 ```
 
-## Personal configs and packages
+## Configuracións e paquetes persoais
 
-I've also modified a few things to make my life easier. You can run this commands to replicate it but it's 100% personal choice
+Tamén modifiquei algunhas cousas para facilitarme a vida. Podes executar estes comandos para replicalo pero é 100% elección persoal
 
-### Personal packages
+### Paquetes persoais
 
-You don't need this packages. It's a list of programs I use almost every day so they may be useful for you too
+Non necesitas estes paquetes. É unha lista de programas que uso case todos os días, así que poden serte útiles tamén
 
 ```bash
 sudo pacman -S qbittorrent discord libreoffice-still krita filezilla keepassxc yt-dlp handbrake obs-studio element-desktop
@@ -160,25 +160,25 @@ yay -S visual-studio-code-bin affine-bin puddletag librewolf-bin
 flatpak install com.protonvpn.www com.usebruno.Bruno org.torproject.torbrowser-launcher
 ```
 
-### Configure home directories
+### Configurar os directorios do fogar
 
-I use some directories for personal things and those need configuration for other apps to use them correctly
+Uso algúns directorios para cousas persoais e estes necesitan configuración para que outras aplicacións os usen correctamente
 
 ```bash
 mkdir ~/Escritorio ~/Descargas ~/Modelos ~/Público ~/Documentos ~/Música ~/Imaxes ~/Vídeos ~/Xogos ~/Aplicacións && rm -r ~/.config/user-dirs.dirs ~/.config/user-dirs.conf && cp ~/.dotfiles/.config/user-dirs.dirs ~/.config/user-dirs.dirs && cp ~/.dotfiles/.config/user-dirs.conf ~/.config/user-dirs.conf
 ```
 
-### Configure default apps
+### Configurar as aplicacións predeterminadas
 
-I've some configs for my default apps so any link and so on opens on the correct app
+Teño algunhas configuracións para as miñas apps predeterminadas para que calquera ligazón e similares se abran na aplicación correcta
 
 ```bash
 rm -r ~/.config/mimeapps.list && cp ~/.dotfiles/.config/mimeapps.dirs ~/.config/mimeapps.list
 ```
 
-### Create a symlink to the mounted devices directory
+### Crear un enlace simbólico ao directorio de dispositivos montados
 
-This is only needed if you use `udiskctl` or `udiskie`. Really nice if you use the `mount` plugin for Yazi
+Isto só é necesario se usas `udiskctl` ou `udiskie`. Moi útil se usas o plugin `mount` de Yazi
 
 ```bash
 mkdir -p /run/media/$(whoami) && ln -s /run/media/$(whoami) ~/USBs
