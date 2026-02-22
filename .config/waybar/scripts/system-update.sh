@@ -12,6 +12,9 @@ flatpak update
 printf "\nActualizando plugins de Yazi...\n"
 ya pkg upgrade
 
+printf "\nActualizando MIME types...\n"
+~/.config/waybar/scripts/mime-merge.sh
+
 printf "\nActualización completada!\n"
 
 read -rsn 1 -p "Presiona calquera tecla para continuar..."

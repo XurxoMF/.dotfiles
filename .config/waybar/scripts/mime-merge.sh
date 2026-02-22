@@ -7,7 +7,7 @@ MIMEINFO="/usr/share/applications/mimeinfo.cache"
 MIMEAPPS="${1:-$HOME/.config/mimeapps.list}"
 
 if [[ ! -f "$MIMEAPPS" ]]; then
-    echo "Couldn't find $MIMEAPPS"
+    echo "Non se atopou o arquivo de configuración $MIMEAPPS"
     exit 1
 fi
 
@@ -18,9 +18,9 @@ NEW=$(comm -23 \
 COUNT=$(echo "$NEW" | grep -c .)
 
 if [[ $COUNT -eq 0 ]]; then
-    echo "There are no new MIME types to add!"
+    echo "Non hai ningún novo MIME type para engadir!"
     exit 0
 fi
 
 echo "${NEW//$'\n'/$'=\n'}=" >> "$MIMEAPPS"
-echo "Added $COUNT new MIME types to $MIMEAPPS"
+echo "Engadidos $COUNT novos MIME types a $MIMEAPPS"
