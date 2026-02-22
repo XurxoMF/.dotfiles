@@ -17,4 +17,5 @@ printf "\nActualización completada!\n"
 read -rsn 1 -p "Presiona calquera tecla para continuar..."
 
 printf "\n"
-exit 0
+
+kill $PPID
