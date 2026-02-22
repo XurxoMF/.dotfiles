@@ -3,20 +3,15 @@
 # ⚠️ DON'T EDIT THIS FILE, IT'S A SIMPLE LOADER
 # 
 # If you need custom configs add them to
-# ~/.config/bashrc/custom or to the
+# ~/.config/bashrc/custom/* or to the
 # ~/.bashrc-custom file.
 #
-# If you use the ~/.config/bashrc/custom folder
+# If you use the ~/.config/bashrc/custom/* folder
 # I recommend you to use the 00-name to 100-name
 # file names.
 #
 
 [[ $- != *i* ]] && return
-
-alias ls='ls --color=auto'
-alias grep='grep --color=auto'
-
-PS1='\W $ '
 
 for f in ~/.config/bashrc/*; do
   if [ ! -d "$f" ]; then

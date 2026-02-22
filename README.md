@@ -137,7 +137,7 @@ rm -r ~/.config/yazi && ln -s ~/.dotfiles/.config/yazi ~/.config/yazi && ya pkg 
 This is the custom .bashrc config and loader
 
 ```bash
-rm -r ~/.bashrc && ln -s ~/.dotfiles/.bashrc ~/.bashrc && mkdir -p ~/.config/bashrc
+rm -r ~/.bashrc ~/.config/bashrc && ln -s ~/.dotfiles/.bashrc ~/.bashrc && ln -s ~/.dotfiles/.config/bashrc ~/.config/bashrc && touch ~/.bashrc_custom && mkdir -p ~/.config/bashrc/custom
 ```
 
 ## Personal configs and packages
