@@ -11,6 +11,11 @@
 # file names.
 #
 
+[[ $- != *i* ]] && return
+
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+
 for f in ~/.config/bashrc/*; do
   if [ ! -d "$f" ]; then
     # shellcheck source=/dev/null
