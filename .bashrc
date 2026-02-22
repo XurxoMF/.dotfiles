@@ -16,6 +16,8 @@
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 
+PS1='\W $ '
+
 for f in ~/.config/bashrc/*; do
   if [ ! -d "$f" ]; then
     # shellcheck source=/dev/null
