@@ -284,6 +284,7 @@ files = [
 	{ name = ".babelrc", text = "", fg = "#cbcb41" },
 	{ name = ".bash_profile", text = "", fg = "#89e051" },
 	{ name = ".bashrc", text = "", fg = "#89e051" },
+	{ name = ".bashrc_custom", text = "", fg = "#89e051" },
 	{ name = ".clang-format", text = "", fg = "#6d8086" },
 	{ name = ".clang-tidy", text = "", fg = "#6d8086" },
 	{ name = ".codespellrc", text = "󰓆", fg = "#35da60" },

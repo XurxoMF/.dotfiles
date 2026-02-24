@@ -6,7 +6,7 @@
 
 # Ignore custom .bashrc
 .bashrc-custom
-.config/bashrc/cutsom/
+.config/bashrc/custom/
 
 # Ignore kitty custom config
 .config/kitty/custom.conf
