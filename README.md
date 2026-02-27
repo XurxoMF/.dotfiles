@@ -157,7 +157,7 @@ yay -S visual-studio-code-bin affine-bin puddletag librewolf-bin
 ```
 
 ```bash
-flatpak install com.protonvpn.www com.usebruno.Bruno org.torproject.torbrowser-launcher
+flatpak install com.protonvpn.www com.usebruno.Bruno org.torproject.torbrowser-launcher com.valvesoftware.Steam
 ```
 
 ### Configurar os directorios do fogar
