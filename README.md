@@ -113,7 +113,15 @@ rm -r ~/.config/walker && ln -s ~/.dotfiles/.config/walker ~/.config/walker
 Esta é a configuración e estilos de Waybar
 
 ```bash
-rm -r ~/.config/waybar && ln -s ~/.dotfiles/.config/waybar ~/.config/waybar && mkdir -p .config/autostart && cp /etc/xdg/autostart/nm-applet.desktop ~/.config/autostart/nm-applet.desktop && echo "Hiden=true" >> ~/.config/autostart/nm-applet.desktop
+rm -r ~/.config/waybar && ln -s ~/.dotfiles/.config/waybar ~/.config/waybar
+```
+
+### Configuración dos portales XDG:
+
+Esta é a configuración e dos portales XDG
+
+```bash
+rm -r ~/.config/xdg-desktop-portal && ln -s ~/.dotfiles/.config/xdg-desktop-portal ~/.config/xdg-desktop-portal
 ```
 
 ### Configuración de xsettingsd:
@@ -149,7 +157,7 @@ Tamén modifiquei algunhas cousas para facilitarme a vida. Podes executar estes 
 Non necesitas estes paquetes. É unha lista de programas que uso case todos os días, así que poden serte útiles tamén
 
 ```bash
-sudo pacman -S qbittorrent discord libreoffice-still krita filezilla keepassxc yt-dlp handbrake obs-studio element-desktop
+sudo pacman -S qbittorrent discord libreoffice-still krita filezilla keepassxc yt-dlp handbrake obs-studio element-desktop vlc vlc-plugins-all
 ```
 
 ```bash

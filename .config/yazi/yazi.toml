@@ -2,7 +2,7 @@
 
 [mgr]
 ratio          = [ 2, 3, 3 ]
-sort_by        = "alphabetical"
+sort_by        = "natural"
 sort_sensitive = false
 sort_reverse 	 = false
 sort_dir_first = true
@@ -31,7 +31,7 @@ edit = [
 	{ run = "xdg-open %s",                    desc = "Editar",                        for = "linux",  block = false,  orphan = true },
 ]
 edit-text = [
-	{ run = "nvim %s",                        desc = "Editar con NeoVim",             for = "linux",  block = false,  orphan = true },
+	{ run = "nvim %s",                        desc = "Editar con NeoVim",             for = "linux",  block = true,  orphan = false },
 	{ run = "code %s",                        desc = "Editar con VS Code",            for = "linux",  block = false,  orphan = true },
 ]
 edit-image = [
@@ -41,7 +41,6 @@ edit-video = [
 	{ run = "ghb -d %s",                      desc = "Editar con Handbrake",          for = "linux",  block = false,  orphan = true },
 ]
 play = [
-	{ run = "xdg-open %s1",                   desc = "Reproducir",                    for = "linux",  block = false,  orphan = true },
 	{ run = "vlc %s1",                        desc = "Reproducir con VLC",            for = "linux",  block = false,  orphan = true },
 ]
 open = [
@@ -58,22 +57,22 @@ download = [
 	{ run = "ya emit download %S",            desc = "Descargar",                     for = "linux",  block = false,  orphan = false },
 ]
 bulk-rename = [
-	{ run = "nvim --wait %s",                 desc = "Renomear en masa",              for = "linux",  block = true,  orphan = false },
+	{ run = "code --wait %s",                 desc = "Renomear en masa",              for = "linux",  block = true,  orphan = true },
 ]
 
 [open]
 rules = [
 	# Carpeta
-	{ url = "*/",                                                                                             use = [ "edit-text", "open", "reveal" ] },
+	{ url = "*/",                                                                                             use = [ "open", "edit-text", "reveal" ] },
 	# Texto
-	{ mime = "text/*",                                                                                        use = [ "edit-text", "open", "reveal" ] },
+	{ mime = "text/*",                                                                                        use = [ "open", "edit-text", "reveal" ] },
 	# JSON
-	{ mime = "application/{json,ndjson}",                                                                     use = [ "edit-text", "open", "reveal" ] },
-	{ mime = "*/javascript",                                                                                  use = [ "edit-text", "open", "reveal" ] },
+	{ mime = "application/{json,ndjson}",                                                                     use = [ "open", "edit-text", "reveal" ] },
+	{ mime = "*/javascript",                                                                                  use = [ "open", "edit-text", "reveal" ] },
 	# Imaxe
-	{ mime = "image/*",                                                                                       use = [ "edit-image", "open", "reveal" ] },
+	{ mime = "image/*",                                                                                       use = [ "open", "edit-image", "reveal" ] },
 	# Vídeo
-	{ mime = "video/*",                                                                                       use = [ "edit-video", "play", "reveal" ] },
+	{ mime = "video/*",                                                                                       use = [ "play", "edit-video", "reveal" ] },
 	# Audio
 	{ mime = "video/*",                                                                                       use = [ "play", "reveal" ] },
 	# Archivo
