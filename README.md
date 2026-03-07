@@ -157,7 +157,7 @@ Tamén modifiquei algunhas cousas para facilitarme a vida. Podes executar estes 
 Non necesitas estes paquetes. É unha lista de programas que uso case todos os días, así que poden serte útiles tamén
 
 ```bash
-sudo pacman -S qbittorrent discord libreoffice-still krita filezilla keepassxc yt-dlp handbrake obs-studio element-desktop vlc vlc-plugins-all
+sudo pacman -S qbittorrent discord libreoffice-still krita filezilla keepassxc yt-dlp handbrake obs-studio element-desktop vlc vlc-plugins-all docker docker-compose docker-buildx
 ```
 
 ```bash
