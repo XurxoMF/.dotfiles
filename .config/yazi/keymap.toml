@@ -2,21 +2,21 @@
 
 [mgr]
 prepend_keymap = [
-	{ on = "R",                   run = "plugin recycle-bin",              desc = "Abrir o menú da papeleira de reciclaxe" },
-	{ on = "M",                   run = "plugin mount",                    desc = "Xestionar discos externos"              },
-	{ on = [ "c", "m" ],          run = "plugin chmod",                    desc = "Chmod nos ficheiros seleccionados"      },
-	{ on = [ "c", "a", "a" ],     run = "plugin compress",                 desc = "Arquivar ficheiros seleccionados"       },
-	{ on = [ "c", "a", "p" ],     run = "plugin compress -p",              desc = "Arquivar ficheiros seleccionados (contrasinal)"                    },
-	{ on = [ "c", "a", "l" ],     run = "plugin compress -l",              desc = "Arquivar ficheiros seleccionados (nivel de compresión)"            },
-	{ on = [ "c", "a", "f" ],     run = "plugin compress -pl",             desc = "Arquivar ficheiros seleccionados (contrasinal + nivel de compresión)" },
+	{ on = "R",                   run = "plugin recycle-bin",              desc = "Abrir o menú da papeleira"                                },
+	{ on = "M",                   run = "plugin mount",                    desc = "Xestionar discos externos"                                             },
+	{ on = [ "c", "m" ],          run = "plugin chmod",                    desc = "Cambiar permisos"                                                      },
+	{ on = [ "c", "a", "a" ],     run = "plugin compress",                 desc = "Comprimir"                                                             },
+	{ on = [ "c", "a", "p" ],     run = "plugin compress -p",              desc = "Comprimir (contrasinal)"                                               },
+	{ on = [ "c", "a", "l" ],     run = "plugin compress -l",              desc = "Comprimir (compresión)"                                                },
+	{ on = [ "c", "a", "f" ],     run = "plugin compress -pl",             desc = "Comprimir (contrasinal + compresión)"                                  },
 ]
 keymap = [
 	{ on = "<Esc>",               run = "escape",                          desc = "Saír do modo visual, limpar selección ou cancelar busca"  },
 	{ on = "<C-[>",               run = "escape",                          desc = "Saír do modo visual, limpar selección ou cancelar busca"  },
-	{ on = "q",                   run = "quit",                            desc = "Saír do proceso"                                         },
-	{ on = "Q",                   run = "quit --no-cwd-file",              desc = "Saír sen gardar o ficheiro cwd"                          },
-	{ on = "<C-c>",               run = "close",                           desc = "Pechar a pestana actual ou saír se é a última"           },
-	{ on = "<C-z>",               run = "suspend",                         desc = "Suspender o proceso"                                     },
+	{ on = "q",                   run = "quit",                            desc = "Saír do proceso"                                          },
+	{ on = "Q",                   run = "quit --no-cwd-file",              desc = "Saír sen gardar o ficheiro cwd"                           },
+	{ on = "<C-c>",               run = "close",                           desc = "Pechar a pestana actual ou saír se é a última"            },
+	{ on = "<C-z>",               run = "suspend",                         desc = "Suspender o proceso"                                      },
 
 	# Saltos
 	{ on = "k",                   run = "arrow prev",                      desc = "Ficheiro anterior"           },
@@ -25,27 +25,27 @@ keymap = [
 	{ on = "<Up>",                run = "arrow prev",                      desc = "Ficheiro anterior"           },
 	{ on = "<Down>",              run = "arrow next",                      desc = "Ficheiro seguinte"           },
 
-	{ on = "<C-u>",               run = "arrow -50%",                      desc = "Subir o cursor media páxina" },
+	{ on = "<C-u>",               run = "arrow -50%",                      desc = "Subir o cursor media páxina"  },
 	{ on = "<C-d>",               run = "arrow 50%",                       desc = "Baixar o cursor media páxina" },
-	{ on = "<C-b>",               run = "arrow -100%",                     desc = "Subir o cursor unha páxina"  },
-	{ on = "<C-f>",               run = "arrow 100%",                      desc = "Baixar o cursor unha páxina" },
+	{ on = "<C-b>",               run = "arrow -100%",                     desc = "Subir o cursor unha páxina"   },
+	{ on = "<C-f>",               run = "arrow 100%",                      desc = "Baixar o cursor unha páxina"  },
 
-	{ on = "<S-PageUp>",          run = "arrow -50%",                      desc = "Subir o cursor media páxina" },
+	{ on = "<S-PageUp>",          run = "arrow -50%",                      desc = "Subir o cursor media páxina"  },
 	{ on = "<S-PageDown>",        run = "arrow 50%",                       desc = "Baixar o cursor media páxina" },
-	{ on = "<PageUp>",            run = "arrow -100%",                     desc = "Subir o cursor unha páxina"  },
-	{ on = "<PageDown>",          run = "arrow 100%",                      desc = "Baixar o cursor unha páxina" },
+	{ on = "<PageUp>",            run = "arrow -100%",                     desc = "Subir o cursor unha páxina"   },
+	{ on = "<PageDown>",          run = "arrow 100%",                      desc = "Baixar o cursor unha páxina"  },
 
 	{ on = [ "g", "g" ],          run = "arrow top",                       desc = "Ir ao inicio" },
 	{ on = "G",                   run = "arrow bot",                       desc = "Ir ao final"  },
 
 	# Navegación
-	{ on = "h",                   run = "leave",                           desc = "Volver ao directorio pai"      },
-	{ on = "l",                   run = "enter",                           desc = "Entrar no subdirectorio"       },
+	{ on = "h",                   run = "leave",                           desc = "Volver ao directorio pai"       },
+	{ on = "l",                   run = "enter",                           desc = "Entrar no subdirectorio"        },
 
-	{ on = "<Left>",              run = "leave",                           desc = "Volver ao directorio pai"      },
-	{ on = "<Right>",             run = "enter",                           desc = "Entrar no subdirectorio"       },
+	{ on = "<Left>",              run = "leave",                           desc = "Volver ao directorio pai"       },
+	{ on = "<Right>",             run = "enter",                           desc = "Entrar no subdirectorio"        },
 
-	{ on = "H",                   run = "back",                            desc = "Volver ao directorio anterior" },
+	{ on = "H",                   run = "back",                            desc = "Volver ao directorio anterior"  },
 	{ on = "L",                   run = "forward",                         desc = "Avanzar ao directorio seguinte" },
 
 	# Selección
@@ -65,31 +65,31 @@ keymap = [
 	{ on = "<Tab>",               run = "spot",                            desc = "Inspeccionar o ficheiro baixo o cursor" },
 
 	# Operacións
-	{ on = "o",                   run = "open",                            desc = "Abrir os ficheiros seleccionados"                     },
+	{ on = "o",                   run = "open",                            desc = "Abrir os ficheiros seleccionados"                      },
 	{ on = "O",                   run = "open --interactive",              desc = "Abrir os ficheiros seleccionados de forma interactiva" },
-	{ on = "<Enter>",             run = "open",                            desc = "Abrir os ficheiros seleccionados"                     },
+	{ on = "<Enter>",             run = "open",                            desc = "Abrir os ficheiros seleccionados"                      },
 	{ on = "<S-Enter>",           run = "open --interactive",              desc = "Abrir os ficheiros seleccionados de forma interactiva" },
-	{ on = "y",                   run = "yank",                            desc = "Copiar os ficheiros seleccionados"                    },
-	{ on = "x",                   run = "yank --cut",                      desc = "Cortar os ficheiros seleccionados"                    },
-	{ on = "p",                   run = "paste",                           desc = "Pegar os ficheiros copiados"                          },
+	{ on = "y",                   run = "yank",                            desc = "Copiar os ficheiros seleccionados"                     },
+	{ on = "x",                   run = "yank --cut",                      desc = "Cortar os ficheiros seleccionados"                     },
+	{ on = "p",                   run = "paste",                           desc = "Pegar os ficheiros copiados"                           },
 	{ on = "P",                   run = "paste --force",                   desc = "Pegar os ficheiros copiados (sobrescribir se existe)"  },
-	{ on = "-",                   run = "link",                            desc = "Crear ligazón simbólica coa ruta absoluta"            },
-	{ on = "_",                   run = "link --relative",                 desc = "Crear ligazón simbólica coa ruta relativa"            },
-	{ on = "<C-->",               run = "hardlink",                        desc = "Crear ligazón dura dos ficheiros copiados"            },
-	{ on = "Y",                   run = "unyank",                          desc = "Cancelar o estado de copiado"                         },
-	{ on = "X",                   run = "unyank",                          desc = "Cancelar o estado de copiado"                         },
-	{ on = "d",                   run = "remove",                          desc = "Mover os ficheiros seleccionados ao lixo"             },
-	{ on = "D",                   run = "remove --permanently",            desc = "Eliminar permanentemente os ficheiros seleccionados"  },
-	{ on = "a",                   run = "create",                          desc = "Crear un ficheiro (rematar en / para directorios)"    },
-	{ on = "r",                   run = "rename --cursor=before_ext",      desc = "Renomear os ficheiros seleccionados"                  },
-	{ on = ";",                   run = "shell --interactive",             desc = "Executar un comando de shell"                         },
-	{ on = ":",                   run = "shell --block --interactive",     desc = "Executar un comando de shell (bloquear ata rematar)"  },
-	{ on = ".",                   run = "hidden toggle",                   desc = "Alternar a visibilidade dos ficheiros ocultos"        },
-	{ on = "s",                   run = "search --via=fd",                 desc = "Buscar ficheiros por nome con fd"                     },
-	{ on = "S",                   run = "search --via=rg",                 desc = "Buscar ficheiros por contido con ripgrep"             },
-	{ on = "<C-s>",               run = "escape --search",                 desc = "Cancelar a busca en curso"                           },
-	{ on = "z",                   run = "plugin fzf",                      desc = "Saltar a un ficheiro/directorio con fzf"              },
-	{ on = "Z",                   run = "plugin zoxide",                   desc = "Saltar a un directorio con zoxide"                   },
+	{ on = "-",                   run = "link",                            desc = "Crear ligazón simbólica coa ruta absoluta"             },
+	{ on = "_",                   run = "link --relative",                 desc = "Crear ligazón simbólica coa ruta relativa"             },
+	{ on = "<C-->",               run = "hardlink",                        desc = "Crear ligazón dura dos ficheiros copiados"             },
+	{ on = "Y",                   run = "unyank",                          desc = "Cancelar o estado de copiado"                          },
+	{ on = "X",                   run = "unyank",                          desc = "Cancelar o estado de copiado"                          },
+	{ on = "d",                   run = "remove",                          desc = "Mover os ficheiros seleccionados ao lixo"              },
+	{ on = "D",                   run = "remove --permanently",            desc = "Eliminar permanentemente os ficheiros seleccionados"   },
+	{ on = "a",                   run = "create",                          desc = "Crear un ficheiro (rematar en / para directorios)"     },
+	{ on = "r",                   run = "rename --cursor=before_ext",      desc = "Renomear os ficheiros seleccionados"                   },
+	{ on = ";",                   run = "shell --interactive",             desc = "Executar un comando de shell"                          },
+	{ on = ":",                   run = "shell --block --interactive",     desc = "Executar un comando de shell (bloquear ata rematar)"   },
+	{ on = ".",                   run = "hidden toggle",                   desc = "Alternar a visibilidade dos ficheiros ocultos"         },
+	{ on = "s",                   run = "search --via=fd",                 desc = "Buscar ficheiros por nome con fd"                      },
+	{ on = "S",                   run = "search --via=rg",                 desc = "Buscar ficheiros por contido con ripgrep"              },
+	{ on = "<C-s>",               run = "escape --search",                 desc = "Cancelar a busca en curso"                             },
+	{ on = "z",                   run = "plugin fzf",                      desc = "Saltar a un ficheiro/directorio con fzf"               },
+	{ on = "Z",                   run = "plugin zoxide",                   desc = "Saltar a un directorio con zoxide"                     },
 
 	# Modo de liña
 	{ on = [ "m", "s" ],          run = "linemode size",                   desc = "Modo de liña: tamaño"       },
@@ -100,9 +100,9 @@ keymap = [
 	{ on = [ "m", "n" ],          run = "linemode none",                   desc = "Modo de liña: ningún"       },
 
 	# Copiar
-	{ on = [ "c", "c" ],          run = "copy path",                       desc = "Copiar a ruta do ficheiro"              },
-	{ on = [ "c", "d" ],          run = "copy dirname",                    desc = "Copiar a ruta do directorio"            },
-	{ on = [ "c", "f" ],          run = "copy filename",                   desc = "Copiar o nome do ficheiro"              },
+	{ on = [ "c", "c" ],          run = "copy path",                       desc = "Copiar a ruta do ficheiro"               },
+	{ on = [ "c", "d" ],          run = "copy dirname",                    desc = "Copiar a ruta do directorio"             },
+	{ on = [ "c", "f" ],          run = "copy filename",                   desc = "Copiar o nome do ficheiro"               },
 	{ on = [ "c", "n" ],          run = "copy name_without_ext",           desc = "Copiar o nome do ficheiro sen extensión" },
 
 	# Filtro
