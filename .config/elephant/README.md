@@ -881,3 +881,30 @@ Find and focus opened windows.
 | min_score              | int32  | depends on provider | minimum score for items to be displayed                             |
 | hide_from_providerlist | bool   | false               | hides a provider from the providerlist provider. provider provider. |
 | delay                  | int    | 100                 | delay in ms before focusing to avoid potential focus issues         |
+| show_workspaces        | bool   | true                | show windows and workspaces                                         |
+| show_empty_workspaces  | bool   | false               | show empty workspaces                                               |
+
+### Wireplumber
+
+Configure audio devices via Pipewire/Wireplumber.
+
+#### Requirements
+
+- `pipewire`
+- `wireplumber`
+
+`~/.config/elephant/wireplumber.toml`
+
+#### Config
+
+| Field                  | Type   | Default                      | Description                                                         |
+| ---------------------- | ------ | ---------------------------- | ------------------------------------------------------------------- |
+| icon                   | string | depends on provider          | icon for provider                                                   |
+| name_pretty            | string | depends on provider          | displayed name for the provider                                     |
+| min_score              | int32  | depends on provider          | minimum score for items to be displayed                             |
+| hide_from_providerlist | bool   | false                        | hides a provider from the providerlist provider. provider provider. |
+| volume-step-size       | int    | 5                            | volume step size (in percent, max: 100)                             |
+| icon_output_muted      | string | audio-volume-muted           | icon for muted output device                                        |
+| icon_output            | string | audio-volume-high            | icon for output device                                              |
+| icon_input_muted       | string | audio-input-microphone-muted | icon for muted input device                                         |
+| icon_input             | string | audio-input-microphone-high  | icon for input device                                               |
