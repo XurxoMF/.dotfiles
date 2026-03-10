@@ -1,4 +1,4 @@
-theme = "xurxomf"               # theme to use
+theme = "matugen"               # theme to use
 force_keyboard_focus = true     # forces keyboard forcus to stay in Walker
 close_when_open = true          # close walker when invoking while already opened
 click_to_close = true           # closes walker if clicking outside of the main content area

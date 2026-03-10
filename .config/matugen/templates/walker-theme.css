@@ -1,9 +1,3 @@
-@define-color window_bg_color rgba(0, 1, 5, 1);
-@define-color accent_bg_color rgba(250, 161, 255, 1);
-@define-color theme_fg_color rgba(255, 255, 255, 1);
-@define-color error_bg_color rgba(196, 16, 31, 1);
-@define-color error_fg_color rgba(255, 255, 255, 1);
-
 * {
   all: unset;
   font-family: "CommitMono Nerd Font";
@@ -12,8 +6,8 @@
 }
 
 popover {
-  background: lighter(@window_bg_color);
-  border: 2px solid darker(@accent_bg_color);
+  background: {{ colors.surface_container_lowest.dark.hex }};
+  border: 2px solid {{colors.surface_tint.default.hex}};
   border-radius: 18px;
   padding: 10px;
 }
@@ -32,18 +26,18 @@ scrollbar {
 
 .box-wrapper {
   box-shadow:
-    0 19px 38px rgba(0, 0, 0, 0.3),
-    0 15px 12px rgba(0, 0, 0, 0.22);
-  background: @window_bg_color;
+    0 19px 38px {{ colors.surface_container_lowest.dark.hex }},
+    0 15px 12px {{ colors.surface_container_lowest.dark.hex }};
+  background: {{ colors.surface_container_lowest.dark.hex }};
   padding: 20px;
   border-radius: 20px;
-  border: 2px solid darker(@accent_bg_color);
+  border: 2px solid {{colors.surface_tint.default.hex}};
 }
 
 .preview-box,
 .elephant-hint,
 .placeholder {
-  color: @theme_fg_color;
+  color: {{ colors.on_surface.dark.hex }};
 }
 
 .box {
@@ -58,14 +52,14 @@ scrollbar {
 }
 
 .input selection {
-  background: lighter(lighter(lighter(@window_bg_color)));
+  background: {{ colors.surface_container_lowest.dark.hex }};
 }
 
 .input {
-  caret-color: @theme_fg_color;
-  background: lighter(@window_bg_color);
+  caret-color: {{ colors.on_surface.dark.hex }};
+  background: {{ colors.surface_container_lowest.dark.hex }};
   padding: 10px;
-  color: @theme_fg_color;
+  color: {{ colors.on_surface.dark.hex }};
 }
 
 .input:focus,
@@ -82,7 +76,7 @@ scrollbar {
 }
 
 .list {
-  color: @theme_fg_color;
+  color: {{ colors.on_surface.dark.hex }};
 }
 
 child {
@@ -94,14 +88,14 @@ child {
 }
 
 .item-quick-activation {
-  background: alpha(@accent_bg_color, 0.5);
+  background: {{colors.surface_tint.default.hex}};
   border-radius: 5px;
   padding: 10px;
 }
 
 /* child:hover .item-box, */
 child:selected .item-box {
-  background: alpha(@accent_bg_color, 0.5);
+  background: {{colors.surface_tint.default.hex}};
 }
 
 .item-text-box {
@@ -122,10 +116,10 @@ child:selected .item-box {
 }
 
 .preview {
-  border: 2px solid alpha(@accent_bg_color, 0.25);
+  border: 2px solid {{colors.surface_tint.default.hex}};
   /* padding: 10px; */
   border-radius: 10px;
-  color: @theme_fg_color;
+  color: {{ colors.on_surface.dark.hex }};
 }
 
 .calc .item-text {
@@ -161,9 +155,9 @@ child:selected .item-box {
 
 .keybinds {
   padding-top: 10px;
-  border-top: 1px solid lighter(@window_bg_color);
+  border-top: 1px solid {{ colors.surface_container_lowest.dark.hex }};
   font-size: 12px;
-  color: @theme_fg_color;
+  color: {{ colors.on_surface.dark.hex }};
 }
 
 .global-keybinds {
@@ -191,20 +185,15 @@ child:selected .item-box {
 .keybind-label {
   padding: 2px 4px;
   border-radius: 4px;
-  border: 2px solid @theme_fg_color;
+  border: 2px solid {{ colors.on_surface.dark.hex }};
 }
 
 .error {
   padding: 10px;
-  background: @error_bg_color;
-  color: @error_fg_color;
+  background: {{colors.error.default.hex}};
+  color: {{ colors.on_surface.dark.hex }};
 }
 
 :not(.calc).current {
   font-style: italic;
-}
-
-.preview-content.archlinuxpkgs,
-.preview-content.dnfpackages {
-  font-family: monospace;
 }

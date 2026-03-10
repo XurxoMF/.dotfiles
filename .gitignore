@@ -1,12 +1,41 @@
-# Ignore yazi plugins folders. Install with `ya pkg install`
-.config/yazi/plugins/
-
-# Ignore hyprland custom configs folder
-.config/hypr/custom/
-
 # Ignore custom .bashrc
 .bashrc-custom
 .config/bashrc/custom/
 
-# Ignore kitty custom config
+# Ignore custom btop configs
+.config/btop/themes/
+
+# Ignore GTK custom configs
+.config/gtk-3.0/colors.css
+.config/gtk-4.0/colors.css
+
+# Ignore hyprland custom configs folder
+.config/hypr/custom/
+.config/hypr/colors.conf
+
+# Ignore kitty custom configs
 .config/kitty/custom.conf
+.config/kitty/colors.conf
+
+# Ignore nvim custom configs
+.config/nvim/colors/
+
+# Ignore qtXct custom configs
+.config/qt5ct/colors/
+.config/qt5ct/qss/
+.config/qt6ct/colors/
+.config/qt6ct/qss/
+
+# Ignore SwayNC custom styles
+.config/swaync/colors.css
+
+# Ignore Walker custom styles
+.config/walker/themes/matugen/
+
+# Ignore Waybar custom styles
+.config/waybar/colors.css
+
+# Ignore yazi plugins folders. Install with `ya pkg install`
+.config/yazi/plugins/
+# Ignore yazi theme. Generated with matugen
+.config/yazi/theme.toml

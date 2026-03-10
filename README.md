@@ -40,17 +40,33 @@ sudo pacman -S noto-fonts-cjk noto-fonts-emoji otf-commit-mono-nerd
 Estes son os 100% necesarios para que os meus dots funcionen. Podes substituílos todos se queres pero perderás funcionalidade
 
 ```bash
-sudo pacman -S rust sddm flatpak kitty neovim firefox hyprland hypridle hyprlock hyprpaper hyprpicker waybar wl-clipboard yazi swaync grim slurp trash-cli hyprpolkitagent util-linux pipewire pavucontrol ffmpeg xorg-xrandr wireplumber 7zip jq poppler fd ripgrep fzf zoxide resvg imagemagick util-linux zip tar xsettingsd bluez-utils libnotify libpulse btop blueman gnome-themes-extra xdg-desktop-portal xdg-desktop-portal-hyprland xdg-desktop-portal-gtk xdg-user-dirs qt6ct qt5ct qt5-base qt6-base qt5-wayland qt6-wayland qt5-virtualkeyboard qt6-virtualkeyboard
+sudo pacman -S rust sddm flatpak kitty neovim firefox hyprland hypridle hyprlock hyprpicker waybar wl-clipboard yazi swaync grim slurp trash-cli hyprpolkitagent util-linux pipewire pavucontrol ffmpeg xorg-xrandr wireplumber 7zip jq poppler fd ripgrep fzf zoxide resvg imagemagick util-linux zip tar xsettingsd bluez-utils libnotify libpulse btop blueman gnome-themes-extra xdg-desktop-portal xdg-desktop-portal-hyprland xdg-desktop-portal-gtk xdg-user-dirs qt5-base qt6-base qt5-wayland qt6-wayland qt5-virtualkeyboard qt6-virtualkeyboard
 ```
 
 ```bash
-yay -S walker elephant-all rar
+yay -S walker elephant-all awww-bin matugen-bin breeze-icons breeze-gtk qt6ct-kde qt5ct-kde rar
 ```
 
 ## Instalación
 
 > [!CAUTION]
 > Isto eliminará algunhas das túas carpetas `.config` e outras, así que fai unha copia de seguridade antes de continuar
+
+### Configuración de bashrc:
+
+Esta é a configuración e cargador personalizado de .bashrc
+
+```bash
+rm -r ~/.bashrc ~/.config/bashrc && ln -s ~/.dotfiles/.bashrc ~/.bashrc && ln -s ~/.dotfiles/.config/bashrc ~/.config/bashrc && touch ~/.bashrc_custom && mkdir -p ~/.config/bashrc/custom
+```
+
+### Configuración de btop
+
+Esta é a configuración de btop
+
+```bash
+rm -r ~/.config/btop && ln -s ~/.dotfiles/.config/btop ~/.config/btop
+```
 
 ### Configuración de Elephant:
 
@@ -73,7 +89,7 @@ rm -r ~/.config/gtk-3.0 ~/.config/gtk-4.0 && ln -s ~/.dotfiles/.config/gtk-3.0 ~
 Isto inclúe os temas e configuracións de Hyprland, Hyprpaper, Hypridle, Hyprlock...
 
 ```bash
-rm -r ~/.config/hypr && ln -s ~/.dotfiles/.config/hypr ~/.config/hypr && mkdir -p ~/.config/hypr/custom/hyprland && touch ~/.config/hypr/custom/hyprland/autostart.conf ~/.config/hypr/custom/hyprland/envs.conf ~/.config/hypr/custom/hyprland/input.conf ~/.config/hypr/custom/hyprland/keybindings-mod.conf ~/.config/hypr/custom/hyprland/keybindings.conf ~/.config/hypr/custom/hyprland/look-and-feel.conf ~/.config/hypr/custom/hyprland/monitors.conf ~/.config/hypr/custom/hyprland/perms.conf ~/.config/hypr/custom/hyprland/windows.conf ~/.config/hypr/custom/hyprland/workspaces.conf
+rm -r ~/.config/hypr && ln -s ~/.dotfiles/.config/hypr ~/.config/hypr && mkdir -p ~/.config/hypr/custom/hyprland && touch ~/.config/hypr/custom/hyprland/autostart.conf ~/.config/hypr/custom/hyprland/envs.conf ~/.config/hypr/custom/hyprland/input.conf ~/.config/hypr/custom/hyprland/keybindings-mod.conf ~/.config/hypr/custom/hyprland/keybindings.conf ~/.config/hypr/custom/hyprland/look-and-feel.conf ~/.config/hypr/custom/hyprland/monitors.conf ~/.config/hypr/custom/hyprland/perms.conf ~/.config/hypr/custom/hyprland/windows.conf ~/.config/hypr/custom/hyprland/workspaces.conf ~/.config/hypr/colors.conf
 ```
 
 ### Tema de Kitty:
@@ -82,6 +98,22 @@ Esta é a configuración e estilos do terminal Kitty
 
 ```bash
 rm -r ~/.config/kitty && ln -s ~/.dotfiles/.config/kitty ~/.config/kitty && touch ~/.config/kitty/custom.conf
+```
+
+### Config de Matugen:
+
+Esta é a configuración de Matugen
+
+```bash
+rm -r ~/.config/matugen && ln -s ~/.dotfiles/.config/matugen ~/.config/matugen && matugen image --source-color-index 1 .dotfiles/wallpaper.jpg
+```
+
+### Config de NeoVim
+
+Esta é a config de NeoVim
+
+```bash
+rm -r ~/.config/nvim && ln -s ~/.dotfiles/.config/nvim ~/.config/nvim
 ```
 
 ### Tema de Mako:
@@ -98,6 +130,14 @@ Esta é a configuración e estilos de QT 5/6
 
 ```bash
 rm -r ~/.config/qt6ct ~/.config/qt5ct && ln -s ~/.dotfiles/.config/qt6ct ~/.config/qt6ct && ln -s ~/.dotfiles/.config/qt5ct ~/.config/qt5ct
+```
+
+### Config de swaync
+
+Esta é a config de swaync
+
+```bash
+rm -r ~/.config/swaync && ln -s ~/.dotfiles/.config/swaync ~/.config/swaync
 ```
 
 ### Configuración de Walker:
@@ -138,14 +178,6 @@ Esta é a configuración e estilos de Yazi
 
 ```bash
 rm -r ~/.config/yazi && ln -s ~/.dotfiles/.config/yazi ~/.config/yazi && ya pkg install
-```
-
-### Configuración de bashrc:
-
-Esta é a configuración e cargador personalizado de .bashrc
-
-```bash
-rm -r ~/.bashrc ~/.config/bashrc && ln -s ~/.dotfiles/.bashrc ~/.bashrc && ln -s ~/.dotfiles/.config/bashrc ~/.config/bashrc && touch ~/.bashrc_custom && mkdir -p ~/.config/bashrc/custom
 ```
 
 ## Configuracións e paquetes persoais
