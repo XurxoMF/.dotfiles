@@ -1,4 +1,11 @@
+# If the user's terminal is in dark mode, Yazi will load `theme-dark.toml` on startup; otherwise, `theme-light.toml`.
+# You can override any parts of them that are not related to the dark/light mode in your own `theme.toml`.
+
+# If you want to dynamically override their content based on dark/light mode, you can specify two different flavors
+# for dark and light modes under `[flavor]`, and do so in those flavors instead.
 "$schema" = "https://yazi-rs.github.io/schemas/theme.json"
+
+# vim:fileencoding=utf-8:foldmethod=marker
 
 # : Flavor {{{
 
@@ -20,7 +27,7 @@ overall = {}
 # : Manager {{{
 
 [mgr]
-cwd = { fg = "cyan" }
+cwd = { fg = "#faa1ff" }
 
 # Find
 find_keyword  = { fg = "yellow", bold = true, italic = true, underline = true }
@@ -53,8 +60,8 @@ syntect_theme = ""
 # : Tabs {{{
 
 [tabs]
-active   = { bg = "blue", bold = true }
-inactive = { fg = "blue", bg = "gray" }
+active   = { bg = "#faa1ff", bold = true }
+inactive = { fg = "#faa1ff", bg = "gray" }
 
 # Separator
 sep_inner = { open = "", close = "" }
@@ -66,8 +73,8 @@ sep_outer = { open = "", close = "" }
 # : Mode {{{
 
 [mode]
-normal_main = { bg = "blue", bold = true }
-normal_alt  = { fg = "blue", bg = "gray" }
+normal_main = { bg = "#faa1ff", bold = true }
+normal_alt  = { fg = "#faa1ff", bg = "gray" }
 
 # Select mode
 select_main = { bg = "red", bold = true }
@@ -94,7 +101,7 @@ padding = { open = "", close = "" }
 # : Status bar {{{
 
 [status]
-overall   = {}
+overall   = { }
 sep_left  = { open = "", close = "" }
 sep_right = { open = "", close = "" }
 
@@ -130,8 +137,8 @@ separator_style = { fg = "darkgray" }
 # : Confirmation {{{
 
 [confirm]
-border     = { fg = "blue" }
-title      = { fg = "blue" }
+border     = { fg = "#faa1ff" }
+title      = { fg = "#faa1ff" }
 body       = {}
 list       = {}
 btn_yes    = { reversed = true }
@@ -144,11 +151,11 @@ btn_labels = [ "  [Y]es  ", "  (N)o  " ]
 # : Spotter {{{
 
 [spot]
-border = { fg = "blue" }
-title  = { fg = "blue" }
+border = { fg = "#faa1ff" }
+title  = { fg = "#faa1ff" }
 
 # Table
-tbl_col  = { fg = "blue" }
+tbl_col  = { fg = "#faa1ff" }
 tbl_cell = { fg = "yellow", reversed = true }
 
 # : }}}
@@ -172,7 +179,7 @@ icon_error = ""
 # : Picker {{{
 
 [pick]
-border   = { fg = "blue" }
+border   = { fg = "#faa1ff" }
 active   = { fg = "magenta", bold = true }
 inactive = {}
 
@@ -182,7 +189,7 @@ inactive = {}
 # : Input {{{
 
 [input]
-border   = { fg = "blue" }
+border   = { fg = "#faa1ff" }
 title    = {}
 value    = {}
 selected = { reversed = true }
@@ -193,7 +200,7 @@ selected = { reversed = true }
 # : Completion {{{
 
 [cmp]
-border   = { fg = "blue" }
+border   = { fg = "#faa1ff" }
 active   = { reversed = true }
 inactive = {}
 
@@ -208,7 +215,7 @@ icon_command = ""
 # : Task manager {{{
 
 [tasks]
-border  = { fg = "blue" }
+border  = { fg = "#faa1ff" }
 title   = {}
 hovered = { fg = "magenta", bold = true }
 
@@ -248,7 +255,7 @@ rules = [
 	{ url = "*", is = "dummy", bg = "red" },
 	{ url = "*/", is = "dummy", bg = "red" },
 	# Fallback
-	{ url = "*/", fg = "blue" }
+	{ url = "*/", fg = "#faa1ff" }
 ]
 
 # : }}}
@@ -259,20 +266,19 @@ rules = [
 [icon]
 globs = []
 dirs  = [
-	{ name = ".config", text = "", fg = "#ff9800" },
-	{ name = ".git", text = "", fg = "#00bcd4" },
-	{ name = ".github", text = "", fg = "#03a9f4" },
-	{ name = ".npm", text = "", fg = "#03a9f4" },
-	{ name = "Desktop", text = "", fg = "#00bcd4" },
-	{ name = "Development", text = "", fg = "#00bcd4" },
-	{ name = "Documents", text = "", fg = "#00bcd4" },
-	{ name = "Downloads", text = "", fg = "#00bcd4" },
-	{ name = "Library", text = "", fg = "#00bcd4" },
-	{ name = "Movies", text = "", fg = "#00bcd4" },
-	{ name = "Music", text = "", fg = "#00bcd4" },
-	{ name = "Pictures", text = "", fg = "#00bcd4" },
-	{ name = "Public", text = "", fg = "#00bcd4" },
-	{ name = "Videos", text = "", fg = "#00bcd4" },
+	{ name = "Aplicacións", text = "", fg = "#faa1ff" },
+	{ name = "Escritorio", text = "", fg = "#faa1ff" },
+	{ name = "Desarrollo", text = "", fg = "#faa1ff" },
+	{ name = "Documentos", text = "", fg = "#faa1ff" },
+	{ name = "Descargas", text = "", fg = "#faa1ff" },
+	{ name = "Libería", text = "", fg = "#faa1ff" },
+	{ name = "Películas", text = "", fg = "#faa1ff" },
+	{ name = "Música", text = "", fg = "#faa1ff" },
+	{ name = "Imaxes", text = "", fg = "#faa1ff" },
+	{ name = "Público", text = "", fg = "#faa1ff" },
+	{ name = "Vídeos", text = "", fg = "#faa1ff" },
+	{ name = "Xogos", text = "", fg = "#faa1ff" },
+	{ name = "Modelos", text = "", fg = "#faa1ff" },
 ]
 files = [
 	{ name = ".babelrc", text = "", fg = "#cbcb41" },
@@ -989,8 +995,7 @@ conds = [
 	{ if = "dummy", text = "", fg = "#f44336" },
 
 	# Fallback
-	{ if = "dir & hovered", text = "", fg = "#03a9f4" },
-	{ if = "dir", text = "", fg = "#03a9f4" },
+	{ if = "dir", text = "", fg = "#faa1ff" },
 	{ if = "exec", text = "", fg = "#8bc34a" },
 	{ if = "!dir", text = "", fg = "#ffffff" },
 ]
