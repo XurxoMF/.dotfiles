@@ -3,5 +3,8 @@
 * Generated with Matugen
 */
 <* for name, value in colors *>
-    @define-color {{name}} {{value.default.hex}};
+    @define-color {{name}} {{value.dark.hex}};
+<* endfor *>
+<* for name, value in base16 *>
+    @define-color {{name}} {{value.dark.hex}};
 <* endfor *>

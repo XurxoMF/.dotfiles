@@ -1,0 +1,282 @@
+@import "./colors.css";
+
+* {
+  font-family: "CommitMono Nerd Font";
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* TOOLTIP */
+
+tooltip {
+  background: alpha(@background, 0.9);
+  border: 2px solid @primary;
+  border-radius: 5px;
+}
+
+tooltip label {
+  color: @on_background;
+  margin: 0px 5px;
+}
+
+/* WAYBAR */
+
+window#waybar {
+  all: unset;
+}
+
+/* MODULES LEFT */
+
+.modules-left {
+  background-color: alpha(@primary_container, 0.9);
+  border: 2px solid @primary;
+  border-radius: 5px;
+  margin: 10px 10px 0px 10px;
+  padding: 5px;
+}
+
+/* CLOCK */
+
+#clock {
+  background-color: @primary;
+  color: @on_primary;
+  border-radius: 5px;
+  padding: 3px 5px 3px 5px;
+}
+
+/* CPU */
+
+#cpu {
+  background-color: @primary;
+  color: @on_primary;
+  border-radius: 5px;
+  padding: 3px 11px 3px 5px;
+}
+
+/* TEMPERATURE */
+
+#temperature {
+  background-color: @primary;
+  color: @on_primary;
+  border-radius: 5px;
+  padding: 3px 5px 3px 5px;
+}
+
+/* MEMORY */
+
+#memory {
+  background-color: @primary;
+  color: @on_primary;
+  border-radius: 5px;
+  padding: 3px 12px 3px 5px;
+}
+
+/* TRAY */
+
+#tray {
+  background-color: @primary;
+  color: @on_primary;
+  border-radius: 5px;
+  padding: 3px 5px 3px 5px;
+}
+
+#tray menu {
+  background-color: alpha(@background, 0.9);
+  border: 2px solid @primary;
+  border-radius: 5px;
+  padding: 2px 0px;
+}
+
+#tray menu menuitem {
+  color: @on_background;
+  margin: 0px 2px;
+}
+
+#tray menu menuitem:first-child {
+  border-radius: 2px 2px 0px 0px;
+}
+
+#tray menu menuitem:last-child {
+  border-radius: 0px 0px 2px 2px;
+}
+
+#tray menu menuitem:hover {
+  background-color: @primary_container;
+  color: @on_primary_container;
+}
+
+#tray menu menuitem:disabled {
+  opacity: 0.5;
+}
+
+#tray menu separator {
+  background-color: @primary;
+  margin: 0px 2px;
+}
+
+/* MODULES CENTER */
+
+.modules-center {
+  background-color: alpha(@primary_container, 0.9);
+  border: 2px solid @primary;
+  border-radius: 5px;
+  margin: 10px 10px 0px 10px;
+  padding: 5px;
+}
+
+/* WORKSPACES */
+
+#workspaces {
+  all: unset;
+}
+
+#workspaces button {
+  all: unset;
+  background-color: @primary;
+  color: @on_primary;
+  border-radius: 5px;
+  margin-right: 5px;
+  padding: 3px 8px;
+  transition: all 0.1s linear;
+}
+
+#workspaces button.active {
+  background-color: @primary;
+  color: @on_primary;
+  padding: 3px 14px;
+}
+
+#workspaces button.empty {
+  background-color: transparent;
+  color: @on_background;
+}
+
+#workspaces button.empty.active {
+  background-color: @primary;
+  color: @on_primary;
+}
+
+/* MODULES RIGHT */
+
+.modules-right {
+  background-color: alpha(@primary_container, 0.9);
+  border: 2px solid @primary;
+  border-radius: 5px;
+  margin: 10px 10px 0px 10px;
+  padding: 5px;
+}
+
+/* CUSTOM / SYSTEMUPDATE */
+
+#custom-systemupdate {
+  background-color: @primary;
+  color: @on_primary;
+  border-radius: 5px;
+  padding: 3px 10px 3px 5px;
+}
+
+/* IDDLE INHIBITOR */
+
+#idle_inhibitor {
+  background-color: @primary;
+  color: @on_primary;
+  border-radius: 5px;
+  padding: 3px 10px 3px 7px;
+}
+
+#idle_inhibitor.deactivated {
+  padding: 3px 11px 3px 6px;
+}
+
+/* POWER PROFILES DAEMON */
+
+#power-profiles-daemon {
+  background-color: @primary;
+  color: @on_primary;
+  border-radius: 5px;
+  padding: 3px 10px 3px 5px;
+}
+
+/* PULSEAUDIO OUTPUT */
+
+#pulseaudio.output {
+  background-color: @primary;
+  color: @on_primary;
+  border-radius: 5px;
+  padding: 3px 8px 3px 5px;
+}
+
+/* PULSEAUDIO INPUT */
+
+#pulseaudio.input {
+  background-color: @primary;
+  color: @on_primary;
+  border-radius: 5px;
+  padding: 3px 5px 3px 5px;
+}
+
+#pulseaudio.input.source-muted {
+  padding: 3px 12px 3px 5px;
+}
+
+/* BACKLIGHT */
+
+#backlight {
+  background-color: @primary;
+  color: @on_primary;
+  border-radius: 5px;
+  padding: 3px 5px 3px 5px;
+}
+
+/* BLUETOOTH */
+
+#bluetooth {
+  background-color: @primary;
+  color: @on_primary;
+  border-radius: 5px;
+  padding: 3px 7px 3px 7px;
+}
+
+#bluetooth.connected {
+  padding: 3px 8px 3px 6px;
+}
+
+/* NETWORK */
+
+#network {
+  background-color: @primary;
+  color: @on_primary;
+  border-radius: 5px;
+  padding: 3px 11px 3px 5px;
+}
+
+/* BATTERY */
+
+#battery {
+  background-color: @primary;
+  color: @on_primary;
+  border-radius: 5px;
+  padding: 3px 10px 3px 5px;
+}
+
+#battery.warning:not(.charging) {
+  color: #ffbe61;
+}
+
+#battery.critical:not(.charging) {
+  color: #f53c3c;
+  animation-name: blink;
+  animation-duration: 0.1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+/* CUSTOM / CTLPANEL */
+
+#custom-ctlpanel {
+  background-color: @primary;
+  color: @on_primary;
+  border-radius: 5px;
+  padding: 3px 10px 3px 5px;
+}

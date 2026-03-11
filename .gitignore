@@ -12,6 +12,7 @@
 # Ignore hyprland custom configs folder
 .config/hypr/custom/
 .config/hypr/colors.conf
+.config/hypr/user.png
 
 # Ignore kitty custom configs
 .config/kitty/custom.conf

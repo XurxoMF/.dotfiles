@@ -5,7 +5,7 @@ set = true
 command = "awww img --transition-type wipe --transition-angle 30 --transition-step 180 --transition-duration 2 {{ image }}"
 
 [templates.btop]
-input_path = '~/.config/matugen/templates/btop-colors.theme'
+input_path = '~/.config/matugen/templates/btop-theme.theme'
 output_path = '~/.config/btop/themes/matugen.theme'
 
 [templates.gtk3]
@@ -35,8 +35,8 @@ input_path = '~/.config/matugen/templates/qtct-colors.conf'
 output_path = '~/.config/qt6ct/colors/matugen.conf'
 
 [templates.waybar]
-input_path = '~/.config/matugen/templates/waybar-theme.css'
-output_path = '~/.config/waybar/style.css'
+input_path = '~/.config/matugen/templates/colors.css'
+output_path = '~/.config/waybar/colors.css'
 post_hook = 'pkill -SIGUSR2 waybar'
 
 [templates.walker]

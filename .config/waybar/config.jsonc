@@ -28,46 +28,35 @@
     // Modules left configuration
     "clock": {
         "format": "{:%H:%M:%S}",
-        "interval": 1,
-        "tooltip-format": "<tt>{calendar}</tt>",
-        "calendar": {
-            "format": {
-                "today": "<span color='#FFFFFF'>{}</span>"
-            }
-        },
-        "actions": {
-            "on-click-right": "shift_down",
-            "on-click": "shift_up"
-        }
+        "tooltip": false,
+        "interval": 1
     },
     "cpu": {
-        "format": "{usage}%  ",
-        "tooltip": false
+        "format": "{usage}% ",
+        "tooltip": false,
+        "interval": 1
     },
     "temperature": {
         // "thermal-zone": 2,
         "hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input",
         "critical-threshold": 80,
         "format": "{temperatureC}°C ",
-        "tooltip": false
+        "tooltip": false,
+        "interval": 1
     },
     "memory": {
-        "format": "{}%  ",
-        "tooltip": false
+        "format": "{}% ",
+        "tooltip": false,
+        "interval": 1
     },
     "tray": {
         "icon-size": 16,
-        "spacing": 8
+        "spacing": 10
     },
     // Modules center configuration
     "hyprland/workspaces": {
         "all-outputs": true,
-        "format": "{icon}",
-        "format-icons": {
-            "active": " ",
-            "default": " ",
-            "empty": " "
-        },
+        "format": "{name}",
         "persistent-workspaces": {
             "*": [
                 1,
@@ -80,15 +69,15 @@
     },
     // Modules right configuration
     "custom/systemupdate": {
-        "format": " ",
+        "format": "",
         "on-click": "kitty -e ~/.dotfiles/scripts/system-update.sh",
         "tooltip": false
     },
     "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {
-            "activated": " ",
-            "deactivated": " "
+            "activated": "",
+            "deactivated": ""
         },
         "tooltip": false
     },
@@ -96,28 +85,26 @@
         "format": "{icon}",
         "tooltip-format": "Perfil: {profile}\nDriver: {driver}",
         "format-icons": {
-            "default": " ",
-            "performance": " ",
-            "balanced": " ",
-            "power-saver": " "
+            "default": "",
+            "performance": "",
+            "balanced": "",
+            "power-saver": ""
         }
     },
     "pulseaudio#output": {
         "format": "{volume}% {icon}",
-        "format-bluetooth": "{volume}% {icon}󰂯",
-        "format-bluetooth-muted": "  {icon}󰂯",
-        "format-muted": " ",
+        "format-bluetooth": "{volume}% {icon} 󰂯",
+        "format-bluetooth-muted": "  {icon} 󰂯",
+        "format-muted": "",
         "format-icons": {
-            "headphone": " ",
-            "hands-free": " ",
-            "headset": " ",
-            "phone": " ",
-            "portable": " ",
-            "car": " ",
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
             "default": [
-                " ",
-                " ",
-                " "
+                ""
             ]
         },
         "on-scroll-up": "wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+",
@@ -129,7 +116,7 @@
     "pulseaudio#input": {
         "format": "{format_source}",
         "format-source": "{volume}% ",
-        "format-source-muted": " ",
+        "format-source-muted": "",
         "on-scroll-up": "wpctl set-volume -l 1 @DEFAULT_AUDIO_SOURCE@ 5%+",
         "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SOURCE@ 5%-",
         "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle",
@@ -139,22 +126,23 @@
     "backlight": {
         "format": "{percent}% {icon}",
         "format-icons": [
-            " ",
-            " ",
-            " ",
-            " ",
-            " ",
-            " ",
-            " ",
-            " ",
-            " "
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
         ],
         "tooltip": false
     },
     "bluetooth": {
         "format-on": "󰂯",
-        "format-off": "off",
+        "format-off": "󰂲",
         "format-disabled": "󰂲",
+        "format-connected": "󰂱",
         "format-connected-battery": "{device_battery_percentage}% 󰂱",
         "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} conectados",
         "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} conectados\n\n{device_enumerate}",
@@ -163,12 +151,12 @@
         "on-click": "blueman-manager"
     },
     "network": {
-        "format-wifi": " ",
-        "format-ethernet": " ",
-        "format-disconnected": " ",
+        "format-wifi": "",
+        "format-ethernet": "",
+        "format-disconnected": "",
         "tooltip-format-disconnected": "Desconectado",
-        "tooltip-format-wifi": "{essid} ({signalStrength}%)  ",
-        "tooltip-format-ethernet": "{ifname}  ",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+        "tooltip-format-ethernet": "{ifname} ",
         "on-click": "kitty -e nmtui"
     },
     "battery": {
@@ -179,19 +167,19 @@
             "critical": 20
         },
         "format": "{capacity}% {icon}",
-        "format-charging": "{capacity}% {icon}  ",
-        "format-plugged": "{capacity}% {icon}  ",
+        "format-charging": "{capacity}% {icon} ",
+        "format-plugged": "{capacity}% {icon} ",
         "format-icons": [
-            " ",
-            " ",
-            " ",
-            " ",
-            " "
+            "",
+            "",
+            "",
+            "",
+            ""
         ],
         "tooltip": false
     },
     "custom/ctlpanel": {
-        "format": " ",
+        "format": "",
         "on-click": "swaync-client -t -sw",
         "escape": true,
         "tooltip": false
