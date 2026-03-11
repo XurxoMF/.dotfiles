@@ -42,6 +42,7 @@ window#waybar {
   color: @on_primary_container;
   border-radius: 5px;
   padding: 3px 5px 3px 5px;
+  margin-right: 5px;
 }
 
 /* CPU */
@@ -51,6 +52,7 @@ window#waybar {
   color: @on_primary_container;
   border-radius: 5px;
   padding: 3px 11px 3px 5px;
+  margin-right: 5px;
 }
 
 /* TEMPERATURE */
@@ -60,6 +62,7 @@ window#waybar {
   color: @on_primary_container;
   border-radius: 5px;
   padding: 3px 5px 3px 5px;
+  margin-right: 5px;
 }
 
 /* MEMORY */
@@ -69,6 +72,7 @@ window#waybar {
   color: @on_primary_container;
   border-radius: 5px;
   padding: 3px 12px 3px 5px;
+  margin-right: 5px;
 }
 
 /* TRAY */
@@ -173,6 +177,7 @@ window#waybar {
   color: @on_primary_container;
   border-radius: 5px;
   padding: 3px 10px 3px 5px;
+  margin-right: 5px;
 }
 
 /* IDDLE INHIBITOR */
@@ -182,6 +187,7 @@ window#waybar {
   color: @on_primary_container;
   border-radius: 5px;
   padding: 3px 10px 3px 7px;
+  margin-right: 5px;
 }
 
 #idle_inhibitor.deactivated {
@@ -195,6 +201,7 @@ window#waybar {
   color: @on_primary_container;
   border-radius: 5px;
   padding: 3px 10px 3px 5px;
+  margin-right: 5px;
 }
 
 /* PULSEAUDIO OUTPUT */
@@ -204,6 +211,7 @@ window#waybar {
   color: @on_primary_container;
   border-radius: 5px;
   padding: 3px 8px 3px 5px;
+  margin-right: 5px;
 }
 
 /* PULSEAUDIO INPUT */
@@ -213,6 +221,7 @@ window#waybar {
   color: @on_primary_container;
   border-radius: 5px;
   padding: 3px 5px 3px 5px;
+  margin-right: 5px;
 }
 
 #pulseaudio.input.source-muted {
@@ -226,6 +235,7 @@ window#waybar {
   color: @on_primary_container;
   border-radius: 5px;
   padding: 3px 5px 3px 5px;
+  margin-right: 5px;
 }
 
 /* BLUETOOTH */
@@ -235,6 +245,7 @@ window#waybar {
   color: @on_primary_container;
   border-radius: 5px;
   padding: 3px 7px 3px 7px;
+  margin-right: 5px;
 }
 
 #bluetooth.connected {
@@ -248,6 +259,7 @@ window#waybar {
   color: @on_primary_container;
   border-radius: 5px;
   padding: 3px 11px 3px 5px;
+  margin-right: 5px;
 }
 
 /* BATTERY */
@@ -257,6 +269,7 @@ window#waybar {
   color: @on_primary_container;
   border-radius: 5px;
   padding: 3px 10px 3px 5px;
+  margin-right: 5px;
 }
 
 #battery.warning:not(.charging) {
