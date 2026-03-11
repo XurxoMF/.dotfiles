@@ -35,9 +35,8 @@
 # Ignore Waybar custom styles
 .config/waybar/colors.css
 
-# Ignore yazi plugins folders. Install with `ya pkg install`
+# Ignore yazi plugins folders and theme. Install with `ya pkg install`
 .config/yazi/plugins/
-# Ignore yazi theme. Generated with matugen
 .config/yazi/theme.toml
 
-colors.txt
+cores.txt

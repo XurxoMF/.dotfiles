@@ -58,6 +58,12 @@ flatpak install com.protonvpn.www com.usebruno.Bruno org.torproject.torbrowser-l
 
 > ⚠️ Importante executar en orden!
 
+### Cambio de permisos dos scripts
+
+```bash
+chmod +x -R ~/.dotfiles/scripts
+```
+
 ### Configuración de directorios
 
 ```bash
@@ -201,8 +207,10 @@ Aquí deixo unha lista de cousas que si que se poden modificar sin problemas.
 
 O tema de cor cambia automaticamente co fondo de pantalla. Cando seleccionas un novo fondo preguntaráseche cal das cores dunha lista queres usar como tema.
 
+Podes cambialo desde Yazi con `Ctrl + O` -> `Establecer como fondo de pantalla` estando sobre unha imaxe con formato `jpg`, `jpeg`, `png`, `gif` ou `webp` ou co seguinte comando:
+
 ```bash
-wallpaper ~/ruta/ao/wallpaper
+wallpaper ~/ruta/ao/wallpaper.xxx
 ```
 
 ### Modificar/extender as configuracións de Hyprland

@@ -13,7 +13,7 @@ printf "\nActualizando plugins de Yazi...\n"
 ya pkg upgrade
 
 printf "\nActualizando MIME types...\n"
-~/.config/waybar/scripts/mime-merge.sh
+~/.dotfiles/scripts/mime-merge.sh
 
 printf "\nActualización completada!\n"
 

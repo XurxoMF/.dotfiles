@@ -28,36 +28,39 @@ ueberzug_offset = [ 0, 0, 0, 0 ]
 
 [opener]
 edit = [
-	{ run = "xdg-open %s",                    desc = "Editar",                        for = "linux",  block = false,  orphan = true },
+	{ run = "xdg-open %s",                           desc = "Editar",                                    for = "linux",  block = false,  orphan = true },
 ]
 edit-text = [
-	{ run = "nvim %s",                        desc = "Editar con NeoVim",             for = "linux",  block = true,  orphan = false },
-	{ run = "code %s",                        desc = "Editar con VS Code",            for = "linux",  block = false,  orphan = true },
+	{ run = "nvim %s",                               desc = "Editar con NeoVim",                         for = "linux",  block = true,  orphan = false },
+	{ run = "code %s",                               desc = "Editar con VS Code",                        for = "linux",  block = false,  orphan = true },
 ]
 edit-image = [
-	{ run = "krita %s",                       desc = "Editar con Krita",              for = "linux",  block = false,  orphan = true },
+	{ run = "krita %s",                              desc = "Editar con Krita",                          for = "linux",  block = false,  orphan = true },
 ]
 edit-video = [
-	{ run = "ghb -d %s",                      desc = "Editar con Handbrake",          for = "linux",  block = false,  orphan = true },
+	{ run = "ghb -d %s",                             desc = "Editar con Handbrake",                      for = "linux",  block = false,  orphan = true },
+]
+set-wallpaper = [
+	{ run = "~/.dotfiles/scripts/wallpaper.sh %s1",  desc = "Establecer como fondo de pantalla",         for = "linux",  block = true,  orphan = false },
 ]
 play = [
-	{ run = "vlc %s1",                        desc = "Reproducir con VLC",            for = "linux",  block = false,  orphan = true },
+	{ run = "vlc %s1",                               desc = "Reproducir con VLC",                        for = "linux",  block = false,  orphan = true },
 ]
 open = [
-	{ run = "xdg-open %s1",                   desc = "Abrir",                         for = "linux",  block = false,  orphan = false },
+	{ run = "xdg-open %s1",                          desc = "Abrir",                                     for = "linux",  block = false,  orphan = false },
 ]
 reveal = [
-	{ run = "xdg-open %d1",                   desc = "Mostrar en Kitty",              for = "linux",  block = false,  orphan = false },
+	{ run = "xdg-open %d1",                          desc = "Mostrar en Kitty",                          for = "linux",  block = false,  orphan = false },
 ]
 extract = [
-	{ run = "ya pub extract --list %s",       desc = "Extraer aquí",                  for = "linux",  block = false,  orphan = false },
+	{ run = "ya pub extract --list %s",              desc = "Extraer aquí",                              for = "linux",  block = false,  orphan = false },
 ]
 download = [
-	{ run = "ya emit download --open %S",     desc = "Descargar e abrir",             for = "linux",  block = false,  orphan = false },
-	{ run = "ya emit download %S",            desc = "Descargar",                     for = "linux",  block = false,  orphan = false },
+	{ run = "ya emit download --open %S",            desc = "Descargar e abrir",                         for = "linux",  block = false,  orphan = false },
+	{ run = "ya emit download %S",                   desc = "Descargar",                                 for = "linux",  block = false,  orphan = false },
 ]
 bulk-rename = [
-	{ run = "code --wait %s",                 desc = "Renomear en masa",              for = "linux",  block = true,  orphan = true },
+	{ run = "code --wait %s",                        desc = "Renomear en masa",                          for = "linux",  block = true,  orphan = true },
 ]
 
 [open]
@@ -69,6 +72,8 @@ rules = [
 	# JSON
 	{ mime = "application/{json,ndjson}",                                                                     use = [ "open", "edit-text", "reveal" ] },
 	{ mime = "*/javascript",                                                                                  use = [ "open", "edit-text", "reveal" ] },
+	# Wallpapers
+	{ mime = "image/{jpg,jpeg,png,gif,webp}",                                                                 use = [ "open", "edit-image", "set-wallpaper", "reveal" ] },
 	# Imaxe
 	{ mime = "image/*",                                                                                       use = [ "open", "edit-image", "reveal" ] },
 	# Vídeo

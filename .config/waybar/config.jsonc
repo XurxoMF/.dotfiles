@@ -81,7 +81,7 @@
     // Modules right configuration
     "custom/systemupdate": {
         "format": " ",
-        "on-click": "kitty -e ~/.config/waybar/scripts/system-update.sh",
+        "on-click": "kitty -e ~/.dotfiles/scripts/system-update.sh",
         "tooltip": false
     },
     "idle_inhibitor": {
