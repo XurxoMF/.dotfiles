@@ -39,3 +39,5 @@
 .config/yazi/plugins/
 # Ignore yazi theme. Generated with matugen
 .config/yazi/theme.toml
+
+colors.txt

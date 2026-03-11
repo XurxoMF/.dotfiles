@@ -6,18 +6,23 @@ Estes son os dotfiles que uso en Arch + Hyprland nos meus dispositivos
 
 Instala este software para que os dotfiles funcionen correctamente
 
-### YAY
+### Instalar YAY
 
 YAY é 100% necesario xa que algúns programas e utilidades dependen del
 
 ```bash
-sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si && cd .. && sudo rm -r yay
+sudo pacman -S --needed git base-devel && \
+git clone https://aur.archlinux.org/yay.git && \
+cd yay && \
+makepkg -si && \
+cd .. && \
+sudo rm -rf yay
 ```
 
-### Activar [multilib] en pacman
+### Activar `[multilib]` en pacman
 
 ```bash
-sudo nvim /etc/pacman.conf
+sudo nano /etc/pacman.conf
 ```
 
 Elimina os comentarios das seguintes liñas:
@@ -27,133 +32,66 @@ Elimina os comentarios das seguintes liñas:
 Include = /etc/pacman.d/mirrorlist
 ```
 
-### Fontes
-
-Estas son as fontes que uso na maioría das partes do meu sistema
-
-```bash
-sudo pacman -S noto-fonts-cjk noto-fonts-emoji otf-commit-mono-nerd
-```
-
-### Paquetes
+### Paquetes requeridos
 
 Estes son os 100% necesarios para que os meus dots funcionen. Podes substituílos todos se queres pero perderás funcionalidade
 
 ```bash
-sudo pacman -S rust sddm flatpak kitty neovim firefox hyprland hypridle hyprlock hyprpicker waybar wl-clipboard yazi swaync grim slurp trash-cli hyprpolkitagent util-linux pipewire pavucontrol ffmpeg xorg-xrandr wireplumber 7zip jq poppler fd ripgrep fzf zoxide resvg imagemagick util-linux zip tar xsettingsd bluez-utils libnotify libpulse btop blueman gnome-themes-extra xdg-desktop-portal xdg-desktop-portal-hyprland xdg-desktop-portal-gtk xdg-user-dirs qt5-base qt6-base qt5-wayland qt6-wayland qt5-virtualkeyboard qt6-virtualkeyboard
+yay -Syu noto-fonts-cjk noto-fonts-emoji otf-commit-mono-nerd rust sddm flatpak kitty neovim firefox hyprland hypridle hyprlock hyprpicker waybar wl-clipboard yazi swaync grim slurp trash-cli hyprpolkitagent util-linux pipewire pavucontrol ffmpeg xorg-xrandr wireplumber 7zip jq poppler fd ripgrep fzf zoxide resvg imagemagick util-linux zip tar xsettingsd bluez-utils libnotify libpulse btop blueman gnome-themes-extra xdg-desktop-portal xdg-desktop-portal-hyprland xdg-desktop-portal-gtk xdg-user-dirs qt5-base qt6-base qt5-wayland qt6-wayland qt5-virtualkeyboard qt6-virtualkeyboard walker elephant-all awww-bin matugen-bin breeze-icons breeze-gtk qt6ct-kde qt5ct-kde rar
+```
+
+### Paquetes opcionais/persoais
+
+Estas son aplicacións que uso eu no día a día e que pode que sexan útiles para vos
+
+```bash
+yay -Syu visual-studio-code-bin affine-bin puddletag librewolf-bin qbittorrent discord libreoffice-still krita filezilla keepassxc yt-dlp handbrake obs-studio element-desktop vlc vlc-plugins-all docker docker-compose docker-buildx thunderbird
 ```
 
 ```bash
-yay -S walker elephant-all awww-bin matugen-bin breeze-icons breeze-gtk qt6ct-kde qt5ct-kde rar
+flatpak install com.protonvpn.www com.usebruno.Bruno org.torproject.torbrowser-launcher com.valvesoftware.Steam flatpak install flathub org.ppsspp.PPSSPP
 ```
 
 ## Instalación
 
-> [!CAUTION]
-> Isto eliminará algunhas das túas carpetas `.config` e outras, así que fai unha copia de seguridade antes de continuar
+> ⚠️ Isto eliminará algunhas das túas carpetas `.config` e outros arquivos como o `.bashrc` así que fai unha copia de seguridade antes de continuar!
+
+> ⚠️ Importante executar en orden!
+
+### Configuración de directorios
+
+```bash
+mkdir ~/Aplicacións ~/Desarrollo ~/Descargas ~/Documentos ~/Escritorio ~/Imaxes ~/Modelos ~/Música ~/Público ~/Vídeos ~/Xogos && \
+rm -rf ~/.config/user-dirs.dirs ~/.config/user-dirs.conf && \
+ln -s ~/.dotfiles/.config/user-dirs.dirs ~/.config/user-dirs.dirs && \
+ln -s ~/.dotfiles/.config/user-dirs.conf ~/.config/user-dirs.conf
+```
+
+### Configuración de MIME Types
+
+```bash
+rm -rf ~/.config/mimeapps.list && \
+ln -s ~/.dotfiles/.config/mimeapps.list ~/.config/mimeapps.list
+```
+
+### Enlace a USBs
+
+Isto só é útil se usas `udiskctl`, `udiskie` ou o plugin `mount` de Yazi
+
+```bash
+rm -rf ~/USBs && \
+ln -s /run/media ~/USBs
+```
 
 ### Configuración de bashrc:
 
-Esta é a configuración e cargador personalizado de .bashrc
-
 ```bash
-rm -r ~/.bashrc ~/.config/bashrc && ln -s ~/.dotfiles/.bashrc ~/.bashrc && ln -s ~/.dotfiles/.config/bashrc ~/.config/bashrc && touch ~/.bashrc_custom && mkdir -p ~/.config/bashrc/custom
-```
-
-### Configuración de btop
-
-Esta é a configuración de btop
-
-```bash
-rm -r ~/.config/btop && ln -s ~/.dotfiles/.config/btop ~/.config/btop
-```
-
-### Configuración de Elephant:
-
-Esta é a configuración de Elephant
-
-```bash
-rm -r ~/.config/elephant && ln -s ~/.dotfiles/.config/elephant ~/.config/elephant
-```
-
-### Configuración de GTK:
-
-Esta é a configuración de GTK 3/4
-
-```bash
-rm -r ~/.config/gtk-3.0 ~/.config/gtk-4.0 && ln -s ~/.dotfiles/.config/gtk-3.0 ~/.config/gtk-3.0 && ln -s ~/.dotfiles/.config/gtk-4.0 ~/.config/gtk-4.0
-```
-
-### Tema de Hypr\*:
-
-Isto inclúe os temas e configuracións de Hyprland, Hyprpaper, Hypridle, Hyprlock...
-
-```bash
-rm -r ~/.config/hypr && ln -s ~/.dotfiles/.config/hypr ~/.config/hypr && mkdir -p ~/.config/hypr/custom/hyprland && touch ~/.config/hypr/custom/hyprland/autostart.conf ~/.config/hypr/custom/hyprland/envs.conf ~/.config/hypr/custom/hyprland/input.conf ~/.config/hypr/custom/hyprland/keybindings-mod.conf ~/.config/hypr/custom/hyprland/keybindings.conf ~/.config/hypr/custom/hyprland/look-and-feel.conf ~/.config/hypr/custom/hyprland/monitors.conf ~/.config/hypr/custom/hyprland/perms.conf ~/.config/hypr/custom/hyprland/windows.conf ~/.config/hypr/custom/hyprland/workspaces.conf ~/.config/hypr/colors.conf
-```
-
-### Tema de Kitty:
-
-Esta é a configuración e estilos do terminal Kitty
-
-```bash
-rm -r ~/.config/kitty && ln -s ~/.dotfiles/.config/kitty ~/.config/kitty && touch ~/.config/kitty/custom.conf
-```
-
-### Config de Matugen:
-
-Esta é a configuración de Matugen
-
-```bash
-rm -r ~/.config/matugen && ln -s ~/.dotfiles/.config/matugen ~/.config/matugen && matugen image --source-color-index 1 .dotfiles/wallpaper.jpg
-```
-
-### Config de NeoVim
-
-Esta é a config de NeoVim
-
-```bash
-rm -r ~/.config/nvim && ln -s ~/.dotfiles/.config/nvim ~/.config/nvim
-```
-
-### Tema de Mako:
-
-Esta é a configuración e estilos do daemon de notificacións Mako
-
-```bash
-rm -r ~/.config/mako && ln -s ~/.dotfiles/.config/mako ~/.config/mako
-```
-
-### Tema de QT:
-
-Esta é a configuración e estilos de QT 5/6
-
-```bash
-rm -r ~/.config/qt6ct ~/.config/qt5ct && ln -s ~/.dotfiles/.config/qt6ct ~/.config/qt6ct && ln -s ~/.dotfiles/.config/qt5ct ~/.config/qt5ct
-```
-
-### Config de swaync
-
-Esta é a config de swaync
-
-```bash
-rm -r ~/.config/swaync && ln -s ~/.dotfiles/.config/swaync ~/.config/swaync
-```
-
-### Configuración de Walker:
-
-Estas son as configuracións e estilos de Walker
-
-```bash
-rm -r ~/.config/walker && ln -s ~/.dotfiles/.config/walker ~/.config/walker
-```
-
-### Tema de Waybar:
-
-Esta é a configuración e estilos de Waybar
-
-```bash
-rm -r ~/.config/waybar && ln -s ~/.dotfiles/.config/waybar ~/.config/waybar
+rm -rf ~/.bashrc ~/.config/bashrc && \
+ln -s ~/.dotfiles/.bashrc ~/.bashrc && \
+ln -s ~/.dotfiles/.config/bashrc ~/.config/bashrc && \
+touch ~/.bashrc_custom && \
+mkdir -p ~/.config/bashrc/custom && \
+source ~/.bashrc
 ```
 
 ### Configuración dos portales XDG:
@@ -161,15 +99,70 @@ rm -r ~/.config/waybar && ln -s ~/.dotfiles/.config/waybar ~/.config/waybar
 Esta é a configuración e dos portales XDG
 
 ```bash
-rm -r ~/.config/xdg-desktop-portal && ln -s ~/.dotfiles/.config/xdg-desktop-portal ~/.config/xdg-desktop-portal
+rm -rf ~/.config/xdg-desktop-portal && \
+ln -s ~/.dotfiles/.config/xdg-desktop-portal ~/.config/xdg-desktop-portal
 ```
 
-### Configuración de xsettingsd:
+### Configuración de Xsettingsd:
 
 Esta é a configuración de xsettingsd
 
 ```bash
-rm -r ~/.config/xsettingsd && ln -s ~/.dotfiles/.config/xsettingsd ~/.config/xsettingsd
+rm -rf ~/.config/xsettingsd && \
+ln -s ~/.dotfiles/.config/xsettingsd ~/.config/xsettingsd
+```
+
+### Configuración de GTK3 e GTK4:
+
+```bash
+rm -rf ~/.config/gtk-3.0 ~/.config/gtk-4.0 && \
+ln -s ~/.dotfiles/.config/gtk-3.0 ~/.config/gtk-3.0 && \
+ln -s ~/.dotfiles/.config/gtk-4.0 ~/.config/gtk-4.0
+```
+
+### Configuración de QT5CT e QT6CT:
+
+```bash
+rm -rf ~/.config/qt6ct ~/.config/qt5ct && \
+ln -s ~/.dotfiles/.config/qt6ct ~/.config/qt6ct && \
+ln -s ~/.dotfiles/.config/qt5ct ~/.config/qt5ct
+```
+
+### Configuración de BTOP++
+
+```bash
+rm -rf ~/.config/btop && \
+ln -s ~/.dotfiles/.config/btop ~/.config/btop
+```
+
+### Configuración de Elephant e Walker:
+
+```bash
+rm -rf ~/.config/elephant ~/.config/walker && \
+ln -s ~/.dotfiles/.config/elephant ~/.config/elephant && \
+ln -s ~/.dotfiles/.config/walker ~/.config/walker
+```
+
+### Configuración de Kitty:
+
+```bash
+rm -rf ~/.config/kitty && \
+ln -s ~/.dotfiles/.config/kitty ~/.config/kitty && \
+touch ~/.config/kitty/custom.conf
+```
+
+### Configuración de SwayNC
+
+```bash
+rm -rf ~/.config/swaync && \
+ln -s ~/.dotfiles/.config/swaync ~/.config/swaync
+```
+
+### Configuración de Waybar:
+
+```bash
+rm -rf ~/.config/waybar && \
+ln -s ~/.dotfiles/.config/waybar ~/.config/waybar
 ```
 
 ### Tema de Yazi:
@@ -177,49 +170,26 @@ rm -r ~/.config/xsettingsd && ln -s ~/.dotfiles/.config/xsettingsd ~/.config/xse
 Esta é a configuración e estilos de Yazi
 
 ```bash
-rm -r ~/.config/yazi && ln -s ~/.dotfiles/.config/yazi ~/.config/yazi && ya pkg install
+rm -rf ~/.config/yazi && \
+ln -s ~/.dotfiles/.config/yazi ~/.config/yazi && \
+ya pkg install
 ```
 
-## Configuracións e paquetes persoais
-
-Tamén modifiquei algunhas cousas para facilitarme a vida. Podes executar estes comandos para replicalo pero é 100% elección persoal
-
-### Paquetes persoais
-
-Non necesitas estes paquetes. É unha lista de programas que uso case todos os días, así que poden serte útiles tamén
+### Configuración de de Hyprland, Hypridle e Hyprlock:
 
 ```bash
-sudo pacman -S qbittorrent discord libreoffice-still krita filezilla keepassxc yt-dlp handbrake obs-studio element-desktop vlc vlc-plugins-all docker docker-compose docker-buildx thunderbird
+rm -rf ~/.config/hypr && \
+ln -s ~/.dotfiles/.config/hypr ~/.config/hypr && \
+mkdir -p ~/.config/hypr/custom/hyprland && \
+touch ~/.config/hypr/custom/hyprland/autostart.conf ~/.config/hypr/custom/hyprland/envs.conf ~/.config/hypr/custom/hyprland/input.conf ~/.config/hypr/custom/hyprland/keybindings-mod.conf ~/.config/hypr/custom/hyprland/keybindings.conf ~/.config/hypr/custom/hyprland/look-and-feel.conf ~/.config/hypr/custom/hyprland/monitors.conf ~/.config/hypr/custom/hyprland/perms.conf ~/.config/hypr/custom/hyprland/windows.conf ~/.config/hypr/custom/hyprland/workspaces.conf ~/.config/hypr/colors.conf
 ```
 
-```bash
-yay -S visual-studio-code-bin affine-bin puddletag librewolf-bin
-```
+### Configuración de Matugen:
+
+> ℹ️ Podes cambiar `~/.dotfiles/wallpaper.jpg` pola ruta do teu wallpaper preferido
 
 ```bash
-flatpak install com.protonvpn.www com.usebruno.Bruno org.torproject.torbrowser-launcher com.valvesoftware.Steam flatpak install flathub org.ppsspp.PPSSPP
-```
-
-### Configurar os directorios do fogar
-
-Uso algúns directorios para cousas persoais e estes necesitan configuración para que outras aplicacións os usen correctamente
-
-```bash
-mkdir ~/Escritorio ~/Descargas ~/Desarrollo ~/Modelos ~/Público ~/Documentos ~/Música ~/Imaxes ~/Vídeos ~/Xogos ~/Aplicacións && rm -r ~/.config/user-dirs.dirs ~/.config/user-dirs.conf && cp ~/.dotfiles/.config/user-dirs.dirs ~/.config/user-dirs.dirs && cp ~/.dotfiles/.config/user-dirs.conf ~/.config/user-dirs.conf
-```
-
-### Configurar as aplicacións predeterminadas
-
-Teño algunhas configuracións para as miñas apps predeterminadas para que calquera ligazón e similares se abran na aplicación correcta
-
-```bash
-rm -r ~/.config/mimeapps.list && cp ~/.dotfiles/.config/mimeapps.dirs ~/.config/mimeapps.list
-```
-
-### Crear un enlace simbólico ao directorio de dispositivos montados
-
-Isto só é necesario se usas `udiskctl` ou `udiskie`. Moi útil se usas o plugin `mount` de Yazi
-
-```bash
-mkdir -p /run/media/$(whoami) && ln -s /run/media/$(whoami) ~/USBs
+rm -rf ~/.config/matugen && \
+ln -s ~/.dotfiles/.config/matugen ~/.config/matugen && \
+wallpaper ~/.dotfiles/wallpaper.jpg
 ```

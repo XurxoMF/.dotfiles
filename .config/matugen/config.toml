@@ -2,7 +2,7 @@
 
 [config.wallpaper]
 set = true
-command = "awww img --transition-type wipe --transition-angle 30 --transition-step 90 --transition-duration 2 {{ image }}"
+command = "awww img --transition-type wipe --transition-angle 30 --transition-step 180 --transition-duration 2 {{ image }}"
 
 [templates.btop]
 input_path = '~/.config/matugen/templates/btop-colors.theme'

@@ -9,12 +9,12 @@
 /* TOOLTIP */
 
 tooltip {
-  background: rgba(0, 0, 0, 0.9);
-  border: 2px solid rgba(250, 161, 255, 1);
+  background: @background;
+  border: 2px solid @surface_tint;
 }
 
 tooltip label {
-  color: rgba(250, 161, 255, 1);
+  color: @surface_tint;
 }
 
 /* WAYBAR */
@@ -35,8 +35,8 @@ window#waybar {
   margin-right: 5px;
   padding: 5px 10px 5px 10px;
   border-radius: 12px;
-  color: rgba(250, 161, 255, 1);
-  background-color: rgba(250, 161, 255, 0.1);
+  color: @surface_tint;
+  background-color: @surface_variant;
 }
 
 /* CPU */
@@ -45,8 +45,8 @@ window#waybar {
   margin-right: 5px;
   padding: 5px 8px 5px 10px;
   border-radius: 12px;
-  color: rgba(250, 161, 255, 1);
-  background-color: rgba(250, 161, 255, 0.1);
+  color: @surface_tint;
+  background-color: @surface_variant;
 }
 
 /* TEMPERATURE */
@@ -56,8 +56,8 @@ window#waybar {
   padding-right: 1px;
   padding: 5px 11px 5px 10px;
   border-radius: 12px;
-  color: rgba(250, 161, 255, 1);
-  background-color: rgba(250, 161, 255, 0.1);
+  color: @surface_tint;
+  background-color: @surface_variant;
 }
 
 /* MEMORY */
@@ -66,8 +66,8 @@ window#waybar {
   margin-right: 5px;
   padding: 5px 10px 5px 10px;
   border-radius: 12px;
-  color: rgba(250, 161, 255, 1);
-  background-color: rgba(250, 161, 255, 0.1);
+  color: @surface_tint;
+  background-color: @surface_variant;
 }
 
 /* TRAY */
@@ -75,25 +75,25 @@ window#waybar {
 #tray {
   padding: 5px 10px 5px 10px;
   border-radius: 12px;
-  color: rgba(250, 161, 255, 1);
-  background-color: rgba(250, 161, 255, 0.1);
+  color: @surface_tint;
+  background-color: @surface_variant;
 }
 
 #tray menu {
-  background-color: rgba(0, 0, 0, 0.9);
-  border: 2px solid rgba(250, 161, 255, 1);
+  background-color: @background;
+  border: 2px solid @surface_tint;
   padding: 8px 0;
 }
 
 #tray menu menuitem {
   padding: 5px 10px 5px 10px;
-  color: rgba(250, 161, 255, 1);
+  color: @surface_tint;
   transition: all 0.3s ease;
 }
 
 #tray menu menuitem:hover {
-  background-color: rgba(250, 161, 255, 0.5);
-  color: rgba(255, 255, 255, 1);
+  background-color: @surface_dim;
+  color: @on_surface;
   transition: all 0.3s ease;
 }
 
@@ -102,7 +102,7 @@ window#waybar {
 }
 
 #tray menu separator {
-  background-color: rgba(250, 161, 255, 0.5);
+  background-color: @surface_dim;
   margin: 5px 0;
 }
 
@@ -117,12 +117,12 @@ window#waybar {
 #workspaces {
   padding: 5px 10px 5px 10px;
   border-radius: 12px;
-  background-color: rgba(250, 161, 255, 0.1);
+  background-color: @surface_variant;
 }
 
 #workspaces button {
   all: unset;
-  color: rgba(250, 161, 255, 0.4);
+  color: @surface_dim;
   transition: all 0.3s ease;
 }
 
@@ -131,27 +131,27 @@ window#waybar {
 }
 
 #workspaces button:hover {
-  color: rgba(250, 161, 255, 1);
+  color: @surface_tint;
   transition: all 0.3s ease;
 }
 
 #workspaces button.active {
-  color: rgba(250, 161, 255, 1);
+  color: @surface_tint;
   transition: all 0.3s ease;
 }
 
 #workspaces button.empty {
-  color: rgba(250, 161, 255, 0.1);
+  color: @surface_dim;
   transition: all 0.3s ease;
 }
 
 #workspaces button.empty:hover {
-  color: rgba(250, 161, 255, 1);
+  color: @surface_tint;
   transition: all 0.3s ease;
 }
 
 #workspaces button.empty.active {
-  color: rgba(250, 161, 255, 1);
+  color: @surface_tint;
   transition: all 0.3s ease;
 }
 
@@ -167,8 +167,8 @@ window#waybar {
   margin-right: 5px;
   padding: 5px 10px 5px 10px;
   border-radius: 12px;
-  color: rgba(250, 161, 255, 1);
-  background-color: rgba(250, 161, 255, 0.1);
+  color: @surface_tint;
+  background-color: @surface_variant;
 }
 
 /* IDDLE INHIBITOR */
@@ -177,8 +177,8 @@ window#waybar {
   margin-right: 5px;
   padding: 5px 10px 5px 10px;
   border-radius: 12px;
-  color: rgba(250, 161, 255, 1);
-  background-color: rgba(250, 161, 255, 0.1);
+  color: @surface_tint;
+  background-color: @surface_variant;
 }
 
 /* POWER PROFILES DAEMON */
@@ -187,8 +187,8 @@ window#waybar {
   margin-right: 5px;
   padding: 5px 10px 5px 10px;
   border-radius: 12px;
-  color: rgba(250, 161, 255, 1);
-  background-color: rgba(250, 161, 255, 0.1);
+  color: @surface_tint;
+  background-color: @surface_variant;
 }
 
 /* PULSEAUDIO OUTPUT */
@@ -197,8 +197,8 @@ window#waybar {
   margin-right: 5px;
   padding: 5px 8px 5px 10px;
   border-radius: 12px;
-  color: rgba(250, 161, 255, 1);
-  background-color: rgba(250, 161, 255, 0.1);
+  color: @surface_tint;
+  background-color: @surface_variant;
 }
 
 /* PULSEAUDIO INPUT */
@@ -207,8 +207,8 @@ window#waybar {
   margin-right: 5px;
   padding: 5px 10px 5px 10px;
   border-radius: 12px;
-  color: rgba(250, 161, 255, 1);
-  background-color: rgba(250, 161, 255, 0.1);
+  color: @surface_tint;
+  background-color: @surface_variant;
 }
 
 /* BACKLIGHT */
@@ -217,8 +217,8 @@ window#waybar {
   margin-right: 5px;
   padding: 5px 10px 5px 10px;
   border-radius: 12px;
-  color: rgba(250, 161, 255, 1);
-  background-color: rgba(250, 161, 255, 0.1);
+  color: @surface_tint;
+  background-color: @surface_variant;
 }
 
 /* BLUETOOTH */
@@ -227,8 +227,8 @@ window#waybar {
   margin-right: 5px;
   padding: 5px 10px 5px 10px;
   border-radius: 12px;
-  color: rgba(250, 161, 255, 1);
-  background-color: rgba(250, 161, 255, 0.1);
+  color: @surface_tint;
+  background-color: @surface_variant;
 }
 
 /* NETWORK */
@@ -237,8 +237,8 @@ window#waybar {
   margin-right: 5px;
   padding: 5px 10px 5px 10px;
   border-radius: 12px;
-  color: rgba(250, 161, 255, 1);
-  background-color: rgba(250, 161, 255, 0.1);
+  color: @surface_tint;
+  background-color: @surface_variant;
 }
 
 /* BATTERY */
@@ -247,8 +247,8 @@ window#waybar {
   margin-right: 5px;
   padding: 5px 10px 5px 10px;
   border-radius: 12px;
-  color: rgba(250, 161, 255, 1);
-  background-color: rgba(250, 161, 255, 0.1);
+  color: @surface_tint;
+  background-color: @surface_variant;
 }
 
 #battery.charging {
@@ -273,6 +273,6 @@ window#waybar {
 #custom-ctlpanel {
   padding: 5px 6px 5px 10px;
   border-radius: 12px;
-  color: rgba(250, 161, 255, 1);
-  background-color: rgba(250, 161, 255, 0.1);
+  color: @surface_tint;
+  background-color: @surface_variant;
 }
