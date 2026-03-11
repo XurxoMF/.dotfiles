@@ -128,6 +128,28 @@ ln -s ~/.dotfiles/.config/qt6ct ~/.config/qt6ct && \
 ln -s ~/.dotfiles/.config/qt5ct ~/.config/qt5ct
 ```
 
+### Configuración de Kitty:
+
+```bash
+rm -rf ~/.config/kitty && \
+ln -s ~/.dotfiles/.config/kitty ~/.config/kitty
+```
+
+### Tema de Yazi:
+
+```bash
+rm -rf ~/.config/yazi && \
+ln -s ~/.dotfiles/.config/yazi ~/.config/yazi && \
+ya pkg install
+```
+
+### Configuración de Waybar:
+
+```bash
+rm -rf ~/.config/waybar && \
+ln -s ~/.dotfiles/.config/waybar ~/.config/waybar
+```
+
 ### Configuración de BTOP++
 
 ```bash
@@ -143,36 +165,11 @@ ln -s ~/.dotfiles/.config/elephant ~/.config/elephant && \
 ln -s ~/.dotfiles/.config/walker ~/.config/walker
 ```
 
-### Configuración de Kitty:
-
-```bash
-rm -rf ~/.config/kitty && \
-ln -s ~/.dotfiles/.config/kitty ~/.config/kitty && \
-touch ~/.config/kitty/custom.conf
-```
-
 ### Configuración de SwayNC
 
 ```bash
 rm -rf ~/.config/swaync && \
 ln -s ~/.dotfiles/.config/swaync ~/.config/swaync
-```
-
-### Configuración de Waybar:
-
-```bash
-rm -rf ~/.config/waybar && \
-ln -s ~/.dotfiles/.config/waybar ~/.config/waybar
-```
-
-### Tema de Yazi:
-
-Esta é a configuración e estilos de Yazi
-
-```bash
-rm -rf ~/.config/yazi && \
-ln -s ~/.dotfiles/.config/yazi ~/.config/yazi && \
-ya pkg install
 ```
 
 ### Configuración de de Hyprland, Hypridle e Hyprlock:
@@ -193,3 +190,29 @@ rm -rf ~/.config/matugen && \
 ln -s ~/.dotfiles/.config/matugen ~/.config/matugen && \
 wallpaper ~/.dotfiles/wallpaper.jpg
 ```
+
+## Personalización
+
+Os meus dotfiles están pensados para ser usados sin modificación algunha pero podes modifcar o que desexes. O problema de modifcar muitas cousas e que cando actualices a futuros posiblemente falle ou perdas cambios.
+
+Aquí deixo unha lista de cousas que si que se poden modificar sin problemas.
+
+### Cambial fondo de pantalla e tema de cor
+
+O tema de cor cambia automaticamente co fondo de pantalla. Cando seleccionas un novo fondo preguntaráseche cal das cores dunha lista queres usar como tema.
+
+```bash
+wallpaper ~/ruta/ao/wallpaper
+```
+
+### Modificar/extender as configuracións de Hyprland
+
+Dentro de `~/.config/hypr/custom/hyprland/...` poderás atopar arquivos para modificar practicamente todo o relacionado con Hyprland.
+
+### Modificar/extender o `.bashrc`
+
+O `.bashrc` é intocable xa que este se encarga de cargar as configuracións importantes dos dotfiles e as configuracións personalizadas.
+
+Para modificalo podes editar o `~/.bashrc_cusrom` ou crear arquivos co nome `XX-nome` en `~/.config/bashrc/custom/...`.
+
+Se queres que Visual Studio Code mostre todo ben ao editar estes documentos engade `# shellcheck shell=bash` arriba de todo en cada un deles.
