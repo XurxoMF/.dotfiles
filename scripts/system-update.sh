@@ -18,7 +18,3 @@ printf "\nActualizando MIME types...\n"
 printf "\nActualización completada!\n"
 
 read -rsn 1 -p "Presiona calquera tecla para continuar..."
-
-printf "\n"
-
-kill $PPID
