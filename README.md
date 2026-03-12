@@ -45,7 +45,7 @@ yay -Syu noto-fonts-cjk noto-fonts-emoji otf-commit-mono-nerd rust sddm flatpak 
 Estas son aplicacións que uso eu no día a día e que pode que sexan útiles para vos
 
 ```bash
-yay -Syu visual-studio-code-bin affine-bin puddletag librewolf-bin qbittorrent discord libreoffice-still krita filezilla keepassxc yt-dlp handbrake obs-studio element-desktop vlc vlc-plugins-all docker docker-compose docker-buildx thunderbird
+yay -Syu visual-studio-code-bin affine-bin puddletag librewolf-bin qbittorrent discord libreoffice-still libreoffice-still-gl libreoffice-still-es krita filezilla keepassxc yt-dlp handbrake obs-studio element-desktop vlc vlc-plugins-all docker docker-compose docker-buildx thunderbird
 ```
 
 ```bash
