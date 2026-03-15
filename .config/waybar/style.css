@@ -9,34 +9,36 @@
 /* TOOLTIP */
 
 tooltip {
-  background: alpha(@surface, 0.9);
-  border: 2px solid @inverse_primary;
-  border-radius: 5px;
+  box-shadow: 0px 0px 5px 0px @shadow;
+  background: @surface;
+  border: 1px solid @outline_variant;
+  border-radius: 15px;
 }
 
 tooltip label {
   color: @on_surface;
-  margin: 5px;
+  margin: 10px;
 }
 
 /* WAYBAR */
 
 #waybar {
   all: unset;
-  background-color: transparent;
 }
 
 #waybar > box {
-  background-color: alpha(@surface, 0.9);
-  color: @on_surface;
-  margin: 10px 10px 0px 10px;
-  border-radius: 5px;
+  margin: 10px 10px 10px 10px;
 }
 
 /* MODULES LEFT */
 
 .modules-left {
-  margin: 5px 10px;
+  box-shadow: 0px 0px 5px 0px @shadow;
+  background-color: @surface;
+  color: @on_surface;
+  border: 1px solid @outline_variant;
+  padding: 5px 10px;
+  border-radius: 15px;
 }
 
 /* CLOCK */
@@ -74,28 +76,26 @@ tooltip label {
 }
 
 #tray menu {
-  background-color: alpha(@surface, 0.9);
-  border: 2px solid @inverse_primary;
-  border-radius: 5px;
-  padding: 2px 0px;
+  background-color: @surface;
+  border-radius: 15px;
+  padding: 0px;
 }
 
 #tray menu menuitem {
   color: @on_surface;
-  margin: 0px 2px;
 }
 
 #tray menu menuitem:first-child {
-  border-radius: 2px 2px 0px 0px;
+  border-radius: 5px 5px 0px 0px;
 }
 
 #tray menu menuitem:last-child {
-  border-radius: 0px 0px 2px 2px;
+  border-radius: 0px 0px 5px 5px;
 }
 
 #tray menu menuitem:hover {
-  background-color: @primary_container;
-  color: @on_primary_container;
+  background-color: @secondary_container;
+  color: @on_secondary_container;
 }
 
 #tray menu menuitem:disabled {
@@ -103,34 +103,47 @@ tooltip label {
 }
 
 #tray menu separator {
-  background-color: @inverse_primary;
-  margin: 0px 2px;
+  border-top: 1px solid @outline;
 }
 
 /* MODULES CENTER */
 
 .modules-center {
-  margin: 5px 10px;
+  box-shadow: 0px 0px 5px 0px @shadow;
+  background-color: @surface;
+  color: @on_surface;
+  border: 1px solid @outline_variant;
+  padding: 5px 5px;
+  border-radius: 15px;
 }
 
 /* WORKSPACES */
 
 #workspaces {
   all: unset;
+  padding: 2px;
 }
 
 #workspaces button {
   all: unset;
-  margin: 5px 5px 5px 5px;
-  padding: 0px 5px;
+  padding: 0px 10px;
   border-radius: 10px;
   transition: all 0.1s linear;
+}
+
+#workspaces button:not(:last-child) {
+  margin-right: 5px;
+}
+
+#workspaces button:not(.empty) {
+  background-color: @secondary_container;
+  color: @on_secondary_container;
 }
 
 #workspaces button.active {
   background-color: @primary_container;
   color: @on_primary_container;
-  padding: 0px 15px;
+  padding: 0px 20px;
 }
 
 #workspaces button.empty.active {
@@ -141,7 +154,12 @@ tooltip label {
 /* MODULES RIGHT */
 
 .modules-right {
-  margin: 5px 10px;
+  box-shadow: 0px 0px 5px 0px @shadow;
+  background-color: @surface;
+  color: @on_surface;
+  border: 1px solid @outline_variant;
+  padding: 5px 10px;
+  border-radius: 15px;
 }
 
 /* CUSTOM / SYSTEMUPDATE */
@@ -208,7 +226,7 @@ tooltip label {
 /* NETWORK */
 
 #network {
-  padding: 3px 11px 3px 5px;
+  padding: 3px 12px 3px 5px;
   margin-right: 5px;
 }
 
@@ -235,5 +253,5 @@ tooltip label {
 /* CUSTOM / CTLPANEL */
 
 #custom-ctlpanel {
-  padding: 3px 10px 3px 5px;
+  padding: 3px 9px 3px 5px;
 }

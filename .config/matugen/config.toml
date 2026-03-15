@@ -53,6 +53,8 @@ output_path = "~/.config/swaync/colors.css"
 post_hook = "swaync-client -rs"
 
 [config.custom_colors]
+black  = "#050505"
+white  = "#f5f5f5"
 red    = "#e53935" 
 orange = "#fb8c00"
 yellow = "#f9a825"
