@@ -6,9 +6,9 @@
 }
 
 popover {
-  background: {{ colors.surface_container_lowest.dark.hex }};
-  border: 2px solid {{colors.surface_tint.default.hex}};
-  border-radius: 18px;
+  background: alpha({{ colors.background.default.hex }}, 0.9);
+  border: 2px solid {{ colors.primary_container.default.hex }};
+  border-radius: 5px;
   padding: 10px;
 }
 
@@ -25,26 +25,24 @@ scrollbar {
 }
 
 .box-wrapper {
-  box-shadow:
-    0 19px 38px {{ colors.surface_container_lowest.dark.hex }},
-    0 15px 12px {{ colors.surface_container_lowest.dark.hex }};
-  background: {{ colors.surface_container_lowest.dark.hex }};
+  box-shadow: 0px 0px 16px 0px {{ colors.shadow.default.hex }};
+  background: alpha({{ colors.background.default.hex }}, 0.9);
   padding: 20px;
-  border-radius: 20px;
-  border: 2px solid {{colors.surface_tint.default.hex}};
+  border-radius: 5px;
+  border: 2px solid {{ colors.primary_container.default.hex }};
 }
 
 .preview-box,
 .elephant-hint,
 .placeholder {
-  color: {{ colors.on_surface.dark.hex }};
+  color: {{ colors.on_background.default.hex }};
 }
 
 .box {
 }
 
 .search-container {
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .input placeholder {
@@ -52,14 +50,15 @@ scrollbar {
 }
 
 .input selection {
-  background: {{ colors.surface_container_lowest.dark.hex }};
+  background: {{ colors.primary_container.default.hex }};
+  color: {{ colors.on_primary_container.default.hex }};
 }
 
 .input {
-  caret-color: {{ colors.on_surface.dark.hex }};
-  background: {{ colors.surface_container_lowest.dark.hex }};
+  caret-color: {{ colors.on_primary.default.hex }};
+  background: {{ colors.primary.default.hex }};
+  color: {{ colors.on_primary.default.hex }};
   padding: 10px;
-  color: {{ colors.on_surface.dark.hex }};
 }
 
 .input:focus,
@@ -76,26 +75,28 @@ scrollbar {
 }
 
 .list {
-  color: {{ colors.on_surface.dark.hex }};
+  color: {{ colors.on_primary_container.default.hex }};
 }
 
 child {
 }
 
 .item-box {
-  border-radius: 10px;
+  border-radius: 5px;
   padding: 10px;
 }
 
 .item-quick-activation {
-  background: {{colors.surface_tint.default.hex}};
+  background: {{ colors.primary_container.default.hex }};
+  color: {{ colors.on_primary_container.default.hex }};
   border-radius: 5px;
   padding: 10px;
 }
 
 /* child:hover .item-box, */
 child:selected .item-box {
-  background: {{colors.surface_tint.default.hex}};
+  background: {{ colors.primary.default.hex }};
+  color: {{ colors.on_primary.default.hex }};
 }
 
 .item-text-box {
@@ -116,10 +117,10 @@ child:selected .item-box {
 }
 
 .preview {
-  border: 2px solid {{colors.surface_tint.default.hex}};
-  /* padding: 10px; */
-  border-radius: 10px;
-  color: {{ colors.on_surface.dark.hex }};
+  border: 2px solid {{ colors.primary_container.default.hex }};
+  color: {{ colors.on_primary_container.default.hex }};
+  border-radius: 5px;
+  padding: 10px;
 }
 
 .calc .item-text {
@@ -154,10 +155,10 @@ child:selected .item-box {
 }
 
 .keybinds {
-  padding-top: 10px;
-  border-top: 1px solid {{ colors.surface_container_lowest.dark.hex }};
+  border-top: 1px solid {{ colors.primary_container.default.hex }};
+  color: {{ colors.on_background.default.hex }};
   font-size: 12px;
-  color: {{ colors.on_surface.dark.hex }};
+  padding-top: 10px;
 }
 
 .global-keybinds {
@@ -185,13 +186,13 @@ child:selected .item-box {
 .keybind-label {
   padding: 2px 4px;
   border-radius: 4px;
-  border: 2px solid {{ colors.on_surface.dark.hex }};
+  border: 2px solid {{ colors.primary_container.default.hex }};
 }
 
 .error {
   padding: 10px;
-  background: {{colors.error.default.hex}};
-  color: {{ colors.on_surface.dark.hex }};
+  background: {{ colors.error.default.hex }};
+  color: {{ colors.on_error.default.hex }};
 }
 
 :not(.calc).current {
