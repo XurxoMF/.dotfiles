@@ -37,7 +37,7 @@ Include = /etc/pacman.d/mirrorlist
 Estes son os 100% necesarios para que os meus dots funcionen. Podes substituílos todos se queres pero perderás funcionalidade
 
 ```bash
-yay -Syu noto-fonts-cjk noto-fonts-emoji otf-commit-mono-nerd rust sddm flatpak kitty neovim firefox hyprland hypridle hyprlock hyprpicker waybar wl-clipboard yazi swaync grim slurp trash-cli hyprpolkitagent util-linux pipewire pavucontrol ffmpeg xorg-xrandr wireplumber 7zip jq poppler fd ripgrep fzf zoxide resvg imagemagick util-linux zip tar xsettingsd bluez-utils libnotify libpulse btop blueman gnome-themes-extra xdg-desktop-portal xdg-desktop-portal-hyprland xdg-desktop-portal-gtk xdg-user-dirs qt5-base qt6-base qt5-wayland qt6-wayland qt5-virtualkeyboard qt6-virtualkeyboard walker elephant-all awww-bin matugen-bin breeze-icons breeze-gtk qt6ct-kde qt5ct-kde rar udisks2
+yay -Syu noto-fonts-cjk noto-fonts-emoji otf-commit-mono-nerd rust sddm flatpak kitty neovim hyprland hypridle hyprlock hyprpicker waybar wl-clipboard yazi swaync grim slurp trash-cli hyprpolkitagent util-linux pipewire pavucontrol ffmpeg xorg-xrandr wireplumber 7zip jq poppler fd ripgrep fzf zoxide resvg imagemagick util-linux zip tar xsettingsd bluez-utils libnotify libpulse btop blueman gnome-themes-extra xdg-desktop-portal xdg-desktop-portal-hyprland xdg-desktop-portal-gtk xdg-user-dirs qt5-base qt6-base qt5-wayland qt6-wayland qt5-virtualkeyboard qt6-virtualkeyboard walker elephant-all awww-bin matugen-bin breeze-icons breeze-gtk qt6ct-kde qt5ct-kde rar udisks2
 ```
 
 ### Paquetes opcionais/persoais
@@ -45,7 +45,7 @@ yay -Syu noto-fonts-cjk noto-fonts-emoji otf-commit-mono-nerd rust sddm flatpak 
 Estas son aplicacións que uso eu no día a día e que pode que sexan útiles para vos
 
 ```bash
-yay -Syu visual-studio-code-bin affine-bin puddletag librewolf-bin qbittorrent discord libreoffice-still libreoffice-still-gl libreoffice-still-es krita filezilla keepassxc yt-dlp handbrake obs-studio element-desktop vlc vlc-plugins-all docker docker-compose docker-buildx thunderbird
+yay -Syu visual-studio-code-bin affine-bin puddletag librewolf-bin qbittorrent discord libreoffice-still libreoffice-still-gl libreoffice-still-es krita filezilla keepassxc yt-dlp handbrake obs-studio element-desktop vlc vlc-plugins-all docker docker-compose docker-buildx thunderbird firefox
 ```
 
 ```bash

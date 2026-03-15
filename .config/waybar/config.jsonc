@@ -70,7 +70,7 @@
     // Modules right configuration
     "custom/systemupdate": {
         "format": "",
-        "on-click": "kitty -e ~/.dotfiles/scripts/system-update.sh",
+        "on-click": "kitty --class system-update -e ~/.dotfiles/scripts/system-update.sh",
         "tooltip": false
     },
     "idle_inhibitor": {
