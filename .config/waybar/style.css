@@ -21,15 +21,22 @@ tooltip label {
 
 /* WAYBAR */
 
-window#waybar {
+#waybar {
   all: unset;
+  background-color: transparent;
+}
+
+#waybar > box {
+  background-color: alpha(@surface, 0.9);
   color: @on_surface;
+  margin: 10px 10px 0px 10px;
+  border-radius: 5px;
 }
 
 /* MODULES LEFT */
 
 .modules-left {
-  margin: 10px 10px 0px 10px;
+  margin: 5px 10px;
 }
 
 /* CLOCK */
@@ -103,7 +110,7 @@ window#waybar {
 /* MODULES CENTER */
 
 .modules-center {
-  margin: 10px 10px 0px 10px;
+  margin: 5px 10px;
 }
 
 /* WORKSPACES */
@@ -134,7 +141,7 @@ window#waybar {
 /* MODULES RIGHT */
 
 .modules-right {
-  margin: 10px 10px 0px 10px;
+  margin: 5px 10px;
 }
 
 /* CUSTOM / SYSTEMUPDATE */
